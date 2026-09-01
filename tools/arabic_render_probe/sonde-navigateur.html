@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>IqraGo — sonde harakat</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=Scheherazade+New&family=Noto+Naskh+Arabic&display=block" rel="stylesheet">
+<style>
+  body { font-family: system-ui, sans-serif; margin: 16px; }
+  pre { font-size: 12px; line-height: 1.35; }
+  .sample { border: 1px solid #c00; height: 64px; display: flex; align-items: center;
+            justify-content: center; margin: 4px 0; overflow: hidden; }
+</style>
+</head>
+<body>
+<h1>Sonde harakat</h1>
+<div id="visual"></div>
+<pre id="out">chargement des polices…</pre>
+<script>
+const CASES = [
+  ["fatha","بَ"],["kasra","بِ"],["damma","بُ"],["sukun","بْ"],["madd_alif","آ"],
+  ["shadda_fatha","بَّ"],["shadda_damma","بُّ"],["shadda_kasra","بِّ"],
+  ["tanwin_damma","بٌ"],["kasra_descend","جِ"],["mot_article","الطَّالِبُ"],
+  ["mixte","Lis بَ maintenant"]
+];
+const FONTS = ["Amiri","Scheherazade New","Noto Naskh Arabic","serif"];
+const SIZES = [18,32,48];
+
+function run() {
+  const c = document.createElement("canvas");
+  const ctx = c.getContext("2d");
+  const lines = [];
+  const worst = {};
+
+  for (const font of FONTS) {
+    for (const size of SIZES) {
+      ctx.font = `${size}px "${font}"`;
+      for (const [id, text] of CASES) {
+        const m = ctx.measureText(text);
+        const inkUp   = m.actualBoundingBoxAscent;
+        const inkDown = m.actualBoundingBoxDescent;
+        const boxUp   = m.fontBoundingBoxAscent;
+        const boxDown = m.fontBoundingBoxDescent;
+        const ovUp   = inkUp   - boxUp;
+        const ovDown = inkDown - boxDown;
+        const key = `${font} @${size}`;
+        const w = Math.max(ovUp, ovDown);
+        if (!(key in worst) || w > worst[key]) worst[key] = w;
+        if (ovUp > 0.5 || ovDown > 0.5) {
+          lines.push(`DEBORDE  ${font.padEnd(20)} ${String(size).padStart(2)}px  ${id.padEnd(14)} `
+            + `haut=${ovUp.toFixed(2)}  bas=${ovDown.toFixed(2)}`);
+        }
+      }
+    }
+  }
+
+  const head = ["=== PIRE DEBORDEMENT (px) : encre au-dela de la boite declaree par la police ===",""];
+  for (const k of Object.keys(worst).sort()) {
+    head.push(`${k.padEnd(28)} ${worst[k].toFixed(2)}  ${worst[k] > 0.5 ? "<<< DEBORDE" : "ok"}`);
+  }
+  head.push("", `=== DETAIL (${lines.length} cas) ===`, "");
+  document.getElementById("out").textContent = head.concat(lines).join("\n");
+
+  const v = document.getElementById("visual");
+  for (const font of FONTS) {
+    const d = document.createElement("div");
+    d.innerHTML = `<b>${font}</b>`;
+    const s = document.createElement("div");
+    s.className = "sample";
+    s.style.font = `40px "${font}"`;
+    s.dir = "rtl";
+    s.textContent = "بُّ  الطَّالِبُ  بٌ  جِ";
+    d.appendChild(s);
+    v.appendChild(d);
+  }
+}
+
+if (document.fonts && document.fonts.ready) {
+  Promise.all(FONTS.slice(0,3).flatMap(f => SIZES.map(s => document.fonts.load(`${s}px "${f}"`))))
+    .then(() => document.fonts.ready)
+    .then(run)
+    .catch(e => { document.getElementById("out").textContent = "ERREUR polices: " + e; });
+} else { run(); }
+</script>
+</body>
+</html>

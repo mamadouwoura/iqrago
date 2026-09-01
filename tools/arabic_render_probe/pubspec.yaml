@@ -1,0 +1,31 @@
+name: arabic_render_probe
+description: >
+  Banc de test du rendu des harakat — IqraGo, étape 1 de la roadmap (D10).
+  Mesure le débordement d'encre des signes diacritiques hors de la boîte de
+  mise en page, police par police et taille par taille. Jetable : ce projet
+  ne fait pas partie de l'application.
+publish_to: none
+version: 1.0.0
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Amiri
+      fonts:
+        - asset: fonts/Amiri-Regular.ttf
+    - family: ScheherazadeNew
+      fonts:
+        - asset: fonts/ScheherazadeNew-Regular.ttf
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: fonts/NotoNaskhArabic-Regular.ttf

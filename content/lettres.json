@@ -1,0 +1,95 @@
+{
+  "_": "Socle du contenu IqraGo. Ordre d'introduction = variante B (D6). Le jour est un ORDRE PAR DEFAUT : le moteur adaptatif peut le devancer ou le retarder (D11). Toute modification doit repasser par tools/contenu/contenu.dart valider.",
+  "version": "1.0.0",
+  "parcours": "course.1",
+
+  "familles": [
+    { "id": "ba",  "squelette": "ٮ", "lettres": ["ب", "ت", "ث"], "indice": "1 point dessous, 2 dessus, 3 dessus" },
+    { "id": "ha",  "squelette": "ح", "lettres": ["ج", "ح", "خ"], "indice": "1 point dessous, rien, 1 dessus" },
+    { "id": "dal", "squelette": "د", "lettres": ["د", "ذ"],      "indice": "rien, 1 point dessus" },
+    { "id": "ra",  "squelette": "ر", "lettres": ["ر", "ز"],      "indice": "rien, 1 point dessus" },
+    { "id": "sin", "squelette": "س", "lettres": ["س", "ش"],      "indice": "rien, 3 points dessus" },
+    { "id": "sad", "squelette": "ص", "lettres": ["ص", "ض"],      "indice": "rien, 1 point dessus" },
+    { "id": "tah", "squelette": "ط", "lettres": ["ط", "ظ"],      "indice": "rien, 1 point dessus" },
+    { "id": "ayn", "squelette": "ع", "lettres": ["ع", "غ"],      "indice": "rien, 1 point dessus" },
+    { "id": "fa",  "squelette": "ڡ", "lettres": ["ف", "ق"],      "indice": "1 point dessus, 2 dessus" }
+  ],
+
+  "lettres": [
+    { "id": "dal",   "lettre": "د", "son": "d",  "famille": "dal", "points": 0, "attache_suivante": false, "jour": 1 },
+    { "id": "dhal",  "lettre": "ذ", "son": "dh", "famille": "dal", "points": 1, "attache_suivante": false, "jour": 1 },
+
+    { "id": "ra",    "lettre": "ر", "son": "r",  "famille": "ra",  "points": 0, "attache_suivante": false, "jour": 2 },
+    { "id": "zay",   "lettre": "ز", "son": "z",  "famille": "ra",  "points": 1, "attache_suivante": false, "jour": 2 },
+    { "id": "alif",  "lettre": "ا", "son": "â",  "famille": null,  "points": 0, "attache_suivante": false, "jour": 2 },
+
+    { "id": "waw",   "lettre": "و", "son": "w",  "famille": null,  "points": 0, "attache_suivante": false, "jour": 3 },
+
+    { "id": "ba",    "lettre": "ب", "son": "b",  "famille": "ba",  "points": 1, "attache_suivante": true,  "jour": 8 },
+    { "id": "ta",    "lettre": "ت", "son": "t",  "famille": "ba",  "points": 2, "attache_suivante": true,  "jour": 8 },
+    { "id": "tha",   "lettre": "ث", "son": "th", "famille": "ba",  "points": 3, "attache_suivante": true,  "jour": 8 },
+
+    { "id": "jim",   "lettre": "ج", "son": "j",  "famille": "ha",  "points": 1, "attache_suivante": true,  "jour": 9 },
+    { "id": "hha",   "lettre": "ح", "son": "h",  "famille": "ha",  "points": 0, "attache_suivante": true,  "jour": 9 },
+    { "id": "kha",   "lettre": "خ", "son": "kh", "famille": "ha",  "points": 1, "attache_suivante": true,  "jour": 9 },
+
+    { "id": "sin",   "lettre": "س", "son": "s",  "famille": "sin", "points": 0, "attache_suivante": true,  "jour": 10 },
+    { "id": "shin",  "lettre": "ش", "son": "sh", "famille": "sin", "points": 3, "attache_suivante": true,  "jour": 10 },
+
+    { "id": "lam",   "lettre": "ل", "son": "l",  "famille": null,  "points": 0, "attache_suivante": true,  "jour": 11 },
+    { "id": "mim",   "lettre": "م", "son": "m",  "famille": null,  "points": 0, "attache_suivante": true,  "jour": 11 },
+
+    { "id": "nun",   "lettre": "ن", "son": "n",  "famille": null,  "points": 1, "attache_suivante": true,  "jour": 12 },
+    { "id": "ya",    "lettre": "ي", "son": "y",  "famille": null,  "points": 2, "attache_suivante": true,  "jour": 12 },
+
+    { "id": "kaf",   "lettre": "ك", "son": "k",  "famille": null,  "points": 0, "attache_suivante": true,  "jour": 13 },
+    { "id": "hah",   "lettre": "ه", "son": "h",  "famille": null,  "points": 0, "attache_suivante": true,  "jour": 13 },
+
+    { "id": "ayn",   "lettre": "ع", "son": "'a", "famille": "ayn", "points": 0, "attache_suivante": true,  "jour": 15 },
+    { "id": "ghayn", "lettre": "غ", "son": "gh", "famille": "ayn", "points": 1, "attache_suivante": true,  "jour": 15 },
+
+    { "id": "fa",    "lettre": "ف", "son": "f",  "famille": "fa",  "points": 1, "attache_suivante": true,  "jour": 16 },
+    { "id": "qaf",   "lettre": "ق", "son": "q",  "famille": "fa",  "points": 2, "attache_suivante": true,  "jour": 16 },
+
+    { "id": "sad",   "lettre": "ص", "son": "s.", "famille": "sad", "points": 0, "attache_suivante": true,  "jour": 17 },
+    { "id": "dad",   "lettre": "ض", "son": "d.", "famille": "sad", "points": 1, "attache_suivante": true,  "jour": 17 },
+
+    { "id": "tta",   "lettre": "ط", "son": "t.", "famille": "tah", "points": 0, "attache_suivante": true,  "jour": 18 },
+    { "id": "zah",   "lettre": "ظ", "son": "z.", "famille": "tah", "points": 1, "attache_suivante": true,  "jour": 18 }
+  ],
+
+  "harakat": [
+    { "id": "fatha", "signe": "َ", "son": "a",  "jour": 1, "geste": "la bouche s'ouvre" },
+    { "id": "kasra", "signe": "ِ", "son": "i",  "jour": 4, "geste": "les lèvres s'étirent, la mâchoire descend" },
+    { "id": "damma", "signe": "ُ", "son": "ou", "jour": 5, "geste": "les lèvres s'arrondissent et avancent" }
+  ],
+
+  "marques": [
+    { "id": "sukun",       "signe": "ْ",  "jour": 19, "libelle": "la lettre sans voyelle, qui ferme la syllabe" },
+    { "id": "madd.alif",   "signe": "ا",  "jour": 20, "libelle": "prolongation du a" },
+    { "id": "madd.waw",    "signe": "و",  "jour": 20, "libelle": "prolongation du ou" },
+    { "id": "madd.ya",     "signe": "ي",  "jour": 20, "libelle": "prolongation du i" },
+    { "id": "shadda",      "signe": "ّ",  "jour": 22, "libelle": "la lettre doublée" },
+    { "id": "tanwin.an",   "signe": "ً",  "jour": 23, "libelle": "tanwin fathah" },
+    { "id": "tanwin.in",   "signe": "ٍ",  "jour": 23, "libelle": "tanwin kasra" },
+    { "id": "tanwin.un",   "signe": "ٌ",  "jour": 23, "libelle": "tanwin damma" },
+    { "id": "article",     "signe": "ال", "jour": 24, "libelle": "l'article défini, lettres solaires et lunaires" }
+  ],
+
+  "contrastes": [
+    { "id": "dal_dhal",   "paire": ["د", "ذ"], "nature": "forme", "jour": 1 },
+    { "id": "ra_zay",     "paire": ["ر", "ز"], "nature": "forme", "jour": 2 },
+    { "id": "ba_ta_tha",  "paire": ["ب", "ت", "ث"], "nature": "forme", "jour": 8 },
+    { "id": "jim_ha_kha", "paire": ["ج", "ح", "خ"], "nature": "forme", "jour": 9 },
+    { "id": "sin_shin",   "paire": ["س", "ش"], "nature": "forme", "jour": 10 },
+    { "id": "ayn_ghayn",  "paire": ["ع", "غ"], "nature": "forme", "jour": 15 },
+    { "id": "fa_qaf",     "paire": ["ف", "ق"], "nature": "forme", "jour": 16 },
+    { "id": "sad_dad",    "paire": ["ص", "ض"], "nature": "forme", "jour": 17 },
+    { "id": "ta_zah",     "paire": ["ط", "ظ"], "nature": "forme", "jour": 18 },
+    { "id": "sin_sad",    "paire": ["س", "ص"], "nature": "son",   "jour": 21 },
+    { "id": "ta_tah",     "paire": ["ت", "ط"], "nature": "son",   "jour": 21 },
+    { "id": "dal_dad",    "paire": ["د", "ض"], "nature": "son",   "jour": 21 }
+  ],
+
+  "jours_repos": [7, 14, 21, 28]
+}

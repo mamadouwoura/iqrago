@@ -1,0 +1,3013 @@
+{
+  "_": "GÉNÉRÉ par tools/contenu/contenu.dart generer — ne pas éditer à la main.",
+  "version": "1.0.0",
+  "total": 283,
+  "competences": [
+    {
+      "id": "fluency.level.1",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "fluency.level.2",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "fluency.level.3",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "fluency.level.4",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "fluency.level.5",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "fluency.level.6",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "fluency.level.7",
+      "type": "fluency",
+      "arabic": null,
+      "introduced_on_day": 0,
+      "latency_threshold_ms": 0,
+      "prerequisites": []
+    },
+    {
+      "id": "contrast.dal_dhal",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dal.recognize",
+        "letter.dhal.recognize"
+      ]
+    },
+    {
+      "id": "haraka.fatha",
+      "type": "haraka",
+      "arabic": "َ",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.dal.recognize",
+      "type": "letter.recognize",
+      "arabic": "د",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.dal.sound",
+      "type": "letter.sound",
+      "arabic": "د",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dal.recognize"
+      ]
+    },
+    {
+      "id": "letter.dhal.recognize",
+      "type": "letter.recognize",
+      "arabic": "ذ",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.dhal.sound",
+      "type": "letter.sound",
+      "arabic": "ذ",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dhal.recognize"
+      ]
+    },
+    {
+      "id": "syllable.dal.fatha",
+      "type": "syllable",
+      "arabic": "دَ",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dal.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.dhal.fatha",
+      "type": "syllable",
+      "arabic": "ذَ",
+      "introduced_on_day": 1,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dhal.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "contrast.ra_zay",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ra.recognize",
+        "letter.zay.recognize"
+      ]
+    },
+    {
+      "id": "letter.alif.recognize",
+      "type": "letter.recognize",
+      "arabic": "ا",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.alif.sound",
+      "type": "letter.sound",
+      "arabic": "ا",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.alif.recognize"
+      ]
+    },
+    {
+      "id": "letter.ra.recognize",
+      "type": "letter.recognize",
+      "arabic": "ر",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.ra.sound",
+      "type": "letter.sound",
+      "arabic": "ر",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ra.recognize"
+      ]
+    },
+    {
+      "id": "letter.zay.recognize",
+      "type": "letter.recognize",
+      "arabic": "ز",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.zay.sound",
+      "type": "letter.sound",
+      "arabic": "ز",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.zay.recognize"
+      ]
+    },
+    {
+      "id": "syllable.alif.fatha",
+      "type": "syllable",
+      "arabic": "اَ",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.alif.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.ra.fatha",
+      "type": "syllable",
+      "arabic": "رَ",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ra.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.zay.fatha",
+      "type": "syllable",
+      "arabic": "زَ",
+      "introduced_on_day": 2,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.zay.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "letter.waw.recognize",
+      "type": "letter.recognize",
+      "arabic": "و",
+      "introduced_on_day": 3,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.waw.sound",
+      "type": "letter.sound",
+      "arabic": "و",
+      "introduced_on_day": 3,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.waw.recognize"
+      ]
+    },
+    {
+      "id": "syllable.waw.fatha",
+      "type": "syllable",
+      "arabic": "وَ",
+      "introduced_on_day": 3,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.waw.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "word.dâr",
+      "type": "word",
+      "arabic": "دَار",
+      "introduced_on_day": 3,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.dal.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.warad",
+      "type": "word",
+      "arabic": "وَرَد",
+      "introduced_on_day": 3,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dal.sound",
+        "letter.ra.sound",
+        "letter.waw.sound"
+      ]
+    },
+    {
+      "id": "haraka.kasra",
+      "type": "haraka",
+      "arabic": "ِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "syllable.alif.kasra",
+      "type": "syllable",
+      "arabic": "اِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.alif.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.dal.kasra",
+      "type": "syllable",
+      "arabic": "دِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dal.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.dhal.kasra",
+      "type": "syllable",
+      "arabic": "ذِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dhal.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.ra.kasra",
+      "type": "syllable",
+      "arabic": "رِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ra.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.waw.kasra",
+      "type": "syllable",
+      "arabic": "وِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.waw.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.zay.kasra",
+      "type": "syllable",
+      "arabic": "زِ",
+      "introduced_on_day": 4,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.zay.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "haraka.damma",
+      "type": "haraka",
+      "arabic": "ُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "syllable.alif.damma",
+      "type": "syllable",
+      "arabic": "اُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.alif.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.dal.damma",
+      "type": "syllable",
+      "arabic": "دُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dal.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.dhal.damma",
+      "type": "syllable",
+      "arabic": "ذُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dhal.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.ra.damma",
+      "type": "syllable",
+      "arabic": "رُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ra.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.waw.damma",
+      "type": "syllable",
+      "arabic": "وُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.waw.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.zay.damma",
+      "type": "syllable",
+      "arabic": "زُ",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.zay.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "word.dhû",
+      "type": "word",
+      "arabic": "ذُو",
+      "introduced_on_day": 5,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.damma",
+        "letter.dhal.sound",
+        "letter.waw.sound"
+      ]
+    },
+    {
+      "id": "word.zâd",
+      "type": "word",
+      "arabic": "زَاد",
+      "introduced_on_day": 6,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.dal.sound",
+        "letter.zay.sound"
+      ]
+    },
+    {
+      "id": "word.zâr",
+      "type": "word",
+      "arabic": "زَار",
+      "introduced_on_day": 6,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ra.sound",
+        "letter.zay.sound"
+      ]
+    },
+    {
+      "id": "contrast.ba_ta_tha",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ba.recognize",
+        "letter.ta.recognize",
+        "letter.tha.recognize"
+      ]
+    },
+    {
+      "id": "letter.ba.form.final",
+      "type": "letter.form",
+      "arabic": "ب",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ba.recognize"
+      ]
+    },
+    {
+      "id": "letter.ba.form.initial",
+      "type": "letter.form",
+      "arabic": "ب",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ba.recognize"
+      ]
+    },
+    {
+      "id": "letter.ba.form.medial",
+      "type": "letter.form",
+      "arabic": "ب",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ba.recognize"
+      ]
+    },
+    {
+      "id": "letter.ba.recognize",
+      "type": "letter.recognize",
+      "arabic": "ب",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.ba.sound",
+      "type": "letter.sound",
+      "arabic": "ب",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ba.recognize"
+      ]
+    },
+    {
+      "id": "letter.ta.form.final",
+      "type": "letter.form",
+      "arabic": "ت",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ta.recognize"
+      ]
+    },
+    {
+      "id": "letter.ta.form.initial",
+      "type": "letter.form",
+      "arabic": "ت",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ta.recognize"
+      ]
+    },
+    {
+      "id": "letter.ta.form.medial",
+      "type": "letter.form",
+      "arabic": "ت",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ta.recognize"
+      ]
+    },
+    {
+      "id": "letter.ta.recognize",
+      "type": "letter.recognize",
+      "arabic": "ت",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.ta.sound",
+      "type": "letter.sound",
+      "arabic": "ت",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ta.recognize"
+      ]
+    },
+    {
+      "id": "letter.tha.form.final",
+      "type": "letter.form",
+      "arabic": "ث",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tha.recognize"
+      ]
+    },
+    {
+      "id": "letter.tha.form.initial",
+      "type": "letter.form",
+      "arabic": "ث",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tha.recognize"
+      ]
+    },
+    {
+      "id": "letter.tha.form.medial",
+      "type": "letter.form",
+      "arabic": "ث",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tha.recognize"
+      ]
+    },
+    {
+      "id": "letter.tha.recognize",
+      "type": "letter.recognize",
+      "arabic": "ث",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.tha.sound",
+      "type": "letter.sound",
+      "arabic": "ث",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tha.recognize"
+      ]
+    },
+    {
+      "id": "syllable.ba.damma",
+      "type": "syllable",
+      "arabic": "بُ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ba.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.ba.fatha",
+      "type": "syllable",
+      "arabic": "بَ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ba.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.ba.kasra",
+      "type": "syllable",
+      "arabic": "بِ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ba.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.ta.damma",
+      "type": "syllable",
+      "arabic": "تُ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ta.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.ta.fatha",
+      "type": "syllable",
+      "arabic": "تَ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ta.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.ta.kasra",
+      "type": "syllable",
+      "arabic": "تِ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ta.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.tha.damma",
+      "type": "syllable",
+      "arabic": "ثُ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.tha.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.tha.fatha",
+      "type": "syllable",
+      "arabic": "ثَ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.tha.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.tha.kasra",
+      "type": "syllable",
+      "arabic": "ثِ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.tha.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.barad",
+      "type": "word",
+      "arabic": "بَرَد",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.dal.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.bâb",
+      "type": "word",
+      "arabic": "بَاب",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound"
+      ]
+    },
+    {
+      "id": "word.thâbit",
+      "type": "word",
+      "arabic": "ثَابِت",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.ta.sound",
+        "letter.tha.sound"
+      ]
+    },
+    {
+      "id": "contrast.jim_ha_kha",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.jim.recognize",
+        "letter.hha.recognize",
+        "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "letter.hha.form.final",
+      "type": "letter.form",
+      "arabic": "ح",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hha.recognize"
+      ]
+    },
+    {
+      "id": "letter.hha.form.initial",
+      "type": "letter.form",
+      "arabic": "ح",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hha.recognize"
+      ]
+    },
+    {
+      "id": "letter.hha.form.medial",
+      "type": "letter.form",
+      "arabic": "ح",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hha.recognize"
+      ]
+    },
+    {
+      "id": "letter.hha.recognize",
+      "type": "letter.recognize",
+      "arabic": "ح",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.hha.sound",
+      "type": "letter.sound",
+      "arabic": "ح",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hha.recognize"
+      ]
+    },
+    {
+      "id": "letter.jim.form.final",
+      "type": "letter.form",
+      "arabic": "ج",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.jim.recognize"
+      ]
+    },
+    {
+      "id": "letter.jim.form.initial",
+      "type": "letter.form",
+      "arabic": "ج",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.jim.recognize"
+      ]
+    },
+    {
+      "id": "letter.jim.form.medial",
+      "type": "letter.form",
+      "arabic": "ج",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.jim.recognize"
+      ]
+    },
+    {
+      "id": "letter.jim.recognize",
+      "type": "letter.recognize",
+      "arabic": "ج",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.jim.sound",
+      "type": "letter.sound",
+      "arabic": "ج",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.jim.recognize"
+      ]
+    },
+    {
+      "id": "letter.kha.form.final",
+      "type": "letter.form",
+      "arabic": "خ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "letter.kha.form.initial",
+      "type": "letter.form",
+      "arabic": "خ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "letter.kha.form.medial",
+      "type": "letter.form",
+      "arabic": "خ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "letter.kha.recognize",
+      "type": "letter.recognize",
+      "arabic": "خ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.kha.sound",
+      "type": "letter.sound",
+      "arabic": "خ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "syllable.hha.damma",
+      "type": "syllable",
+      "arabic": "حُ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.hha.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.hha.fatha",
+      "type": "syllable",
+      "arabic": "حَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.hha.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.hha.kasra",
+      "type": "syllable",
+      "arabic": "حِ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.hha.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.jim.damma",
+      "type": "syllable",
+      "arabic": "جُ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.jim.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.jim.fatha",
+      "type": "syllable",
+      "arabic": "جَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.jim.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.jim.kasra",
+      "type": "syllable",
+      "arabic": "جِ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.jim.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.kha.damma",
+      "type": "syllable",
+      "arabic": "خُ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.kha.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.kha.fatha",
+      "type": "syllable",
+      "arabic": "خَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.kha.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.kha.kasra",
+      "type": "syllable",
+      "arabic": "خِ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.kha.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.hajar",
+      "type": "word",
+      "arabic": "حَجَر",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hha.sound",
+        "letter.jim.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.hâr",
+      "type": "word",
+      "arabic": "حَار",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.hha.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.kharaja",
+      "type": "word",
+      "arabic": "خَرَجَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.jim.sound",
+        "letter.kha.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "contrast.sin_shin",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sin.recognize",
+        "letter.shin.recognize"
+      ]
+    },
+    {
+      "id": "letter.shin.form.final",
+      "type": "letter.form",
+      "arabic": "ش",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.shin.recognize"
+      ]
+    },
+    {
+      "id": "letter.shin.form.initial",
+      "type": "letter.form",
+      "arabic": "ش",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.shin.recognize"
+      ]
+    },
+    {
+      "id": "letter.shin.form.medial",
+      "type": "letter.form",
+      "arabic": "ش",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.shin.recognize"
+      ]
+    },
+    {
+      "id": "letter.shin.recognize",
+      "type": "letter.recognize",
+      "arabic": "ش",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.shin.sound",
+      "type": "letter.sound",
+      "arabic": "ش",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.shin.recognize"
+      ]
+    },
+    {
+      "id": "letter.sin.form.final",
+      "type": "letter.form",
+      "arabic": "س",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sin.recognize"
+      ]
+    },
+    {
+      "id": "letter.sin.form.initial",
+      "type": "letter.form",
+      "arabic": "س",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sin.recognize"
+      ]
+    },
+    {
+      "id": "letter.sin.form.medial",
+      "type": "letter.form",
+      "arabic": "س",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sin.recognize"
+      ]
+    },
+    {
+      "id": "letter.sin.recognize",
+      "type": "letter.recognize",
+      "arabic": "س",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.sin.sound",
+      "type": "letter.sound",
+      "arabic": "س",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sin.recognize"
+      ]
+    },
+    {
+      "id": "syllable.shin.damma",
+      "type": "syllable",
+      "arabic": "شُ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.shin.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.shin.fatha",
+      "type": "syllable",
+      "arabic": "شَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.shin.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.shin.kasra",
+      "type": "syllable",
+      "arabic": "شِ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.shin.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.sin.damma",
+      "type": "syllable",
+      "arabic": "سُ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.sin.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.sin.fatha",
+      "type": "syllable",
+      "arabic": "سَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.sin.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.sin.kasra",
+      "type": "syllable",
+      "arabic": "سِ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.sin.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.darasa",
+      "type": "word",
+      "arabic": "دَرَسَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dal.sound",
+        "letter.ra.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.sahâb",
+      "type": "word",
+      "arabic": "سَحَاب",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.hha.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.shajar",
+      "type": "word",
+      "arabic": "شَجَر",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.jim.sound",
+        "letter.ra.sound",
+        "letter.shin.sound"
+      ]
+    },
+    {
+      "id": "letter.lam.form.final",
+      "type": "letter.form",
+      "arabic": "ل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.lam.recognize"
+      ]
+    },
+    {
+      "id": "letter.lam.form.initial",
+      "type": "letter.form",
+      "arabic": "ل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.lam.recognize"
+      ]
+    },
+    {
+      "id": "letter.lam.form.medial",
+      "type": "letter.form",
+      "arabic": "ل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.lam.recognize"
+      ]
+    },
+    {
+      "id": "letter.lam.recognize",
+      "type": "letter.recognize",
+      "arabic": "ل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.lam.sound",
+      "type": "letter.sound",
+      "arabic": "ل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.lam.recognize"
+      ]
+    },
+    {
+      "id": "letter.mim.form.final",
+      "type": "letter.form",
+      "arabic": "م",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.mim.recognize"
+      ]
+    },
+    {
+      "id": "letter.mim.form.initial",
+      "type": "letter.form",
+      "arabic": "م",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.mim.recognize"
+      ]
+    },
+    {
+      "id": "letter.mim.form.medial",
+      "type": "letter.form",
+      "arabic": "م",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.mim.recognize"
+      ]
+    },
+    {
+      "id": "letter.mim.recognize",
+      "type": "letter.recognize",
+      "arabic": "م",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.mim.sound",
+      "type": "letter.sound",
+      "arabic": "م",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.mim.recognize"
+      ]
+    },
+    {
+      "id": "syllable.lam.damma",
+      "type": "syllable",
+      "arabic": "لُ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.lam.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.lam.fatha",
+      "type": "syllable",
+      "arabic": "لَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.lam.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.lam.kasra",
+      "type": "syllable",
+      "arabic": "لِ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.lam.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.mim.damma",
+      "type": "syllable",
+      "arabic": "مُ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.mim.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.mim.fatha",
+      "type": "syllable",
+      "arabic": "مَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.mim.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.mim.kasra",
+      "type": "syllable",
+      "arabic": "مِ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.mim.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.jamal",
+      "type": "word",
+      "arabic": "جَمَل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.jim.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ]
+    },
+    {
+      "id": "word.mâl",
+      "type": "word",
+      "arabic": "مَال",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ]
+    },
+    {
+      "id": "word.salâm",
+      "type": "word",
+      "arabic": "سَلَام",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "letter.nun.form.final",
+      "type": "letter.form",
+      "arabic": "ن",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.nun.recognize"
+      ]
+    },
+    {
+      "id": "letter.nun.form.initial",
+      "type": "letter.form",
+      "arabic": "ن",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.nun.recognize"
+      ]
+    },
+    {
+      "id": "letter.nun.form.medial",
+      "type": "letter.form",
+      "arabic": "ن",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.nun.recognize"
+      ]
+    },
+    {
+      "id": "letter.nun.recognize",
+      "type": "letter.recognize",
+      "arabic": "ن",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.nun.sound",
+      "type": "letter.sound",
+      "arabic": "ن",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.nun.recognize"
+      ]
+    },
+    {
+      "id": "letter.ya.form.final",
+      "type": "letter.form",
+      "arabic": "ي",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ya.recognize"
+      ]
+    },
+    {
+      "id": "letter.ya.form.initial",
+      "type": "letter.form",
+      "arabic": "ي",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ya.recognize"
+      ]
+    },
+    {
+      "id": "letter.ya.form.medial",
+      "type": "letter.form",
+      "arabic": "ي",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ya.recognize"
+      ]
+    },
+    {
+      "id": "letter.ya.recognize",
+      "type": "letter.recognize",
+      "arabic": "ي",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.ya.sound",
+      "type": "letter.sound",
+      "arabic": "ي",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ya.recognize"
+      ]
+    },
+    {
+      "id": "syllable.nun.damma",
+      "type": "syllable",
+      "arabic": "نُ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.nun.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.nun.fatha",
+      "type": "syllable",
+      "arabic": "نَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.nun.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.nun.kasra",
+      "type": "syllable",
+      "arabic": "نِ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.nun.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.ya.damma",
+      "type": "syllable",
+      "arabic": "يُ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ya.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.ya.fatha",
+      "type": "syllable",
+      "arabic": "يَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ya.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.ya.kasra",
+      "type": "syllable",
+      "arabic": "يِ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ya.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.banât",
+      "type": "word",
+      "arabic": "بَنَات",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.nun.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
+      "id": "word.nâr",
+      "type": "word",
+      "arabic": "نَار",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.nun.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.yad",
+      "type": "word",
+      "arabic": "يَد",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dal.sound",
+        "letter.ya.sound"
+      ]
+    },
+    {
+      "id": "letter.hah.form.final",
+      "type": "letter.form",
+      "arabic": "ه",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hah.recognize"
+      ]
+    },
+    {
+      "id": "letter.hah.form.initial",
+      "type": "letter.form",
+      "arabic": "ه",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hah.recognize"
+      ]
+    },
+    {
+      "id": "letter.hah.form.medial",
+      "type": "letter.form",
+      "arabic": "ه",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hah.recognize"
+      ]
+    },
+    {
+      "id": "letter.hah.recognize",
+      "type": "letter.recognize",
+      "arabic": "ه",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.hah.sound",
+      "type": "letter.sound",
+      "arabic": "ه",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hah.recognize"
+      ]
+    },
+    {
+      "id": "letter.kaf.form.final",
+      "type": "letter.form",
+      "arabic": "ك",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.kaf.form.initial",
+      "type": "letter.form",
+      "arabic": "ك",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.kaf.form.medial",
+      "type": "letter.form",
+      "arabic": "ك",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.kaf.recognize",
+      "type": "letter.recognize",
+      "arabic": "ك",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.kaf.sound",
+      "type": "letter.sound",
+      "arabic": "ك",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kaf.recognize"
+      ]
+    },
+    {
+      "id": "syllable.hah.damma",
+      "type": "syllable",
+      "arabic": "هُ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.hah.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.hah.fatha",
+      "type": "syllable",
+      "arabic": "هَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.hah.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.hah.kasra",
+      "type": "syllable",
+      "arabic": "هِ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.hah.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.kaf.damma",
+      "type": "syllable",
+      "arabic": "كُ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.kaf.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.kaf.fatha",
+      "type": "syllable",
+      "arabic": "كَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.kaf.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.kaf.kasra",
+      "type": "syllable",
+      "arabic": "كِ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.kaf.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.dhahaba",
+      "type": "word",
+      "arabic": "ذَهَبَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.dhal.sound",
+        "letter.hah.sound"
+      ]
+    },
+    {
+      "id": "word.kataba",
+      "type": "word",
+      "arabic": "كَتَبَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.kaf.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
+      "id": "word.kitâb",
+      "type": "word",
+      "arabic": "كِتَاب",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.kaf.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
+      "id": "word.nahar",
+      "type": "word",
+      "arabic": "نَهَر",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hah.sound",
+        "letter.nun.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "contrast.ayn_ghayn",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ayn.recognize",
+        "letter.ghayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ayn.form.final",
+      "type": "letter.form",
+      "arabic": "ع",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ayn.form.initial",
+      "type": "letter.form",
+      "arabic": "ع",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ayn.form.medial",
+      "type": "letter.form",
+      "arabic": "ع",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ayn.recognize",
+      "type": "letter.recognize",
+      "arabic": "ع",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.ayn.sound",
+      "type": "letter.sound",
+      "arabic": "ع",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ghayn.form.final",
+      "type": "letter.form",
+      "arabic": "غ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ghayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ghayn.form.initial",
+      "type": "letter.form",
+      "arabic": "غ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ghayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ghayn.form.medial",
+      "type": "letter.form",
+      "arabic": "غ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ghayn.recognize"
+      ]
+    },
+    {
+      "id": "letter.ghayn.recognize",
+      "type": "letter.recognize",
+      "arabic": "غ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.ghayn.sound",
+      "type": "letter.sound",
+      "arabic": "غ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ghayn.recognize"
+      ]
+    },
+    {
+      "id": "syllable.ayn.damma",
+      "type": "syllable",
+      "arabic": "عُ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ayn.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.ayn.fatha",
+      "type": "syllable",
+      "arabic": "عَ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ayn.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.ayn.kasra",
+      "type": "syllable",
+      "arabic": "عِ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ayn.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.ghayn.damma",
+      "type": "syllable",
+      "arabic": "غُ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ghayn.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.ghayn.fatha",
+      "type": "syllable",
+      "arabic": "غَ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ghayn.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.ghayn.kasra",
+      "type": "syllable",
+      "arabic": "غِ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.ghayn.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.'amal",
+      "type": "word",
+      "arabic": "عَمَل",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ayn.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ]
+    },
+    {
+      "id": "word.ghurâb",
+      "type": "word",
+      "arabic": "غُرَاب",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.damma",
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.ghayn.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.sami'a",
+      "type": "word",
+      "arabic": "سَمِعَ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.ayn.sound",
+        "letter.mim.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "contrast.fa_qaf",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.fa.recognize",
+        "letter.qaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.fa.form.final",
+      "type": "letter.form",
+      "arabic": "ف",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.fa.recognize"
+      ]
+    },
+    {
+      "id": "letter.fa.form.initial",
+      "type": "letter.form",
+      "arabic": "ف",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.fa.recognize"
+      ]
+    },
+    {
+      "id": "letter.fa.form.medial",
+      "type": "letter.form",
+      "arabic": "ف",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.fa.recognize"
+      ]
+    },
+    {
+      "id": "letter.fa.recognize",
+      "type": "letter.recognize",
+      "arabic": "ف",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.fa.sound",
+      "type": "letter.sound",
+      "arabic": "ف",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.fa.recognize"
+      ]
+    },
+    {
+      "id": "letter.qaf.form.final",
+      "type": "letter.form",
+      "arabic": "ق",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.qaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.qaf.form.initial",
+      "type": "letter.form",
+      "arabic": "ق",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.qaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.qaf.form.medial",
+      "type": "letter.form",
+      "arabic": "ق",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.qaf.recognize"
+      ]
+    },
+    {
+      "id": "letter.qaf.recognize",
+      "type": "letter.recognize",
+      "arabic": "ق",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.qaf.sound",
+      "type": "letter.sound",
+      "arabic": "ق",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.qaf.recognize"
+      ]
+    },
+    {
+      "id": "syllable.fa.damma",
+      "type": "syllable",
+      "arabic": "فُ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.fa.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.fa.fatha",
+      "type": "syllable",
+      "arabic": "فَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.fa.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.fa.kasra",
+      "type": "syllable",
+      "arabic": "فِ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.fa.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.qaf.damma",
+      "type": "syllable",
+      "arabic": "قُ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.qaf.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.qaf.fatha",
+      "type": "syllable",
+      "arabic": "قَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.qaf.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.qaf.kasra",
+      "type": "syllable",
+      "arabic": "قِ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.qaf.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.fataha",
+      "type": "word",
+      "arabic": "فَتَحَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.fa.sound",
+        "letter.hha.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
+      "id": "word.qalam",
+      "type": "word",
+      "arabic": "قَلَم",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.qaf.sound"
+      ]
+    },
+    {
+      "id": "word.qamar",
+      "type": "word",
+      "arabic": "قَمَر",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.mim.sound",
+        "letter.qaf.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "contrast.sad_dad",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sad.recognize",
+        "letter.dad.recognize"
+      ]
+    },
+    {
+      "id": "letter.dad.form.final",
+      "type": "letter.form",
+      "arabic": "ض",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dad.recognize"
+      ]
+    },
+    {
+      "id": "letter.dad.form.initial",
+      "type": "letter.form",
+      "arabic": "ض",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dad.recognize"
+      ]
+    },
+    {
+      "id": "letter.dad.form.medial",
+      "type": "letter.form",
+      "arabic": "ض",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dad.recognize"
+      ]
+    },
+    {
+      "id": "letter.dad.recognize",
+      "type": "letter.recognize",
+      "arabic": "ض",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.dad.sound",
+      "type": "letter.sound",
+      "arabic": "ض",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dad.recognize"
+      ]
+    },
+    {
+      "id": "letter.sad.form.final",
+      "type": "letter.form",
+      "arabic": "ص",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sad.recognize"
+      ]
+    },
+    {
+      "id": "letter.sad.form.initial",
+      "type": "letter.form",
+      "arabic": "ص",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sad.recognize"
+      ]
+    },
+    {
+      "id": "letter.sad.form.medial",
+      "type": "letter.form",
+      "arabic": "ص",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sad.recognize"
+      ]
+    },
+    {
+      "id": "letter.sad.recognize",
+      "type": "letter.recognize",
+      "arabic": "ص",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.sad.sound",
+      "type": "letter.sound",
+      "arabic": "ص",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sad.recognize"
+      ]
+    },
+    {
+      "id": "syllable.dad.damma",
+      "type": "syllable",
+      "arabic": "ضُ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dad.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.dad.fatha",
+      "type": "syllable",
+      "arabic": "ضَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dad.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.dad.kasra",
+      "type": "syllable",
+      "arabic": "ضِ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.dad.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.sad.damma",
+      "type": "syllable",
+      "arabic": "صُ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.sad.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.sad.fatha",
+      "type": "syllable",
+      "arabic": "صَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.sad.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.sad.kasra",
+      "type": "syllable",
+      "arabic": "صِ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.sad.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.daraba",
+      "type": "word",
+      "arabic": "ضَرَبَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.dad.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.sabara",
+      "type": "word",
+      "arabic": "صَبَرَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.ra.sound",
+        "letter.sad.sound"
+      ]
+    },
+    {
+      "id": "contrast.ta_zah",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tta.recognize",
+        "letter.zah.recognize"
+      ]
+    },
+    {
+      "id": "letter.tta.form.final",
+      "type": "letter.form",
+      "arabic": "ط",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tta.recognize"
+      ]
+    },
+    {
+      "id": "letter.tta.form.initial",
+      "type": "letter.form",
+      "arabic": "ط",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tta.recognize"
+      ]
+    },
+    {
+      "id": "letter.tta.form.medial",
+      "type": "letter.form",
+      "arabic": "ط",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tta.recognize"
+      ]
+    },
+    {
+      "id": "letter.tta.recognize",
+      "type": "letter.recognize",
+      "arabic": "ط",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.tta.sound",
+      "type": "letter.sound",
+      "arabic": "ط",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tta.recognize"
+      ]
+    },
+    {
+      "id": "letter.zah.form.final",
+      "type": "letter.form",
+      "arabic": "ظ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.zah.recognize"
+      ]
+    },
+    {
+      "id": "letter.zah.form.initial",
+      "type": "letter.form",
+      "arabic": "ظ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.zah.recognize"
+      ]
+    },
+    {
+      "id": "letter.zah.form.medial",
+      "type": "letter.form",
+      "arabic": "ظ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.zah.recognize"
+      ]
+    },
+    {
+      "id": "letter.zah.recognize",
+      "type": "letter.recognize",
+      "arabic": "ظ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "letter.zah.sound",
+      "type": "letter.sound",
+      "arabic": "ظ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.zah.recognize"
+      ]
+    },
+    {
+      "id": "syllable.tta.damma",
+      "type": "syllable",
+      "arabic": "طُ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.tta.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.tta.fatha",
+      "type": "syllable",
+      "arabic": "طَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.tta.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.tta.kasra",
+      "type": "syllable",
+      "arabic": "طِ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.tta.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "syllable.zah.damma",
+      "type": "syllable",
+      "arabic": "ظُ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.zah.sound",
+        "haraka.damma"
+      ]
+    },
+    {
+      "id": "syllable.zah.fatha",
+      "type": "syllable",
+      "arabic": "ظَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.zah.sound",
+        "haraka.fatha"
+      ]
+    },
+    {
+      "id": "syllable.zah.kasra",
+      "type": "syllable",
+      "arabic": "ظِ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 2000,
+      "prerequisites": [
+        "letter.zah.sound",
+        "haraka.kasra"
+      ]
+    },
+    {
+      "id": "word.matar",
+      "type": "word",
+      "arabic": "مَطَر",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.mim.sound",
+        "letter.ra.sound",
+        "letter.tta.sound"
+      ]
+    },
+    {
+      "id": "word.nazara",
+      "type": "word",
+      "arabic": "نَظَرَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.nun.sound",
+        "letter.ra.sound",
+        "letter.zah.sound"
+      ]
+    },
+    {
+      "id": "mark.sukun",
+      "type": "mark",
+      "arabic": "ْ",
+      "introduced_on_day": 19,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "word.bayt",
+      "type": "word",
+      "arabic": "بَيْت",
+      "introduced_on_day": 19,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.ta.sound",
+        "letter.ya.sound",
+        "mark.sukun"
+      ]
+    },
+    {
+      "id": "word.qalb",
+      "type": "word",
+      "arabic": "قَلْب",
+      "introduced_on_day": 19,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.lam.sound",
+        "letter.qaf.sound",
+        "mark.sukun"
+      ]
+    },
+    {
+      "id": "word.ward",
+      "type": "word",
+      "arabic": "وَرْد",
+      "introduced_on_day": 19,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dal.sound",
+        "letter.ra.sound",
+        "letter.waw.sound",
+        "mark.sukun"
+      ]
+    },
+    {
+      "id": "mark.madd.alif",
+      "type": "mark",
+      "arabic": "ا",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "mark.madd.waw",
+      "type": "mark",
+      "arabic": "و",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "mark.madd.ya",
+      "type": "mark",
+      "arabic": "ي",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "word.kabîr",
+      "type": "word",
+      "arabic": "كَبِير",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.ba.sound",
+        "letter.kaf.sound",
+        "letter.ra.sound",
+        "letter.ya.sound",
+        "mark.madd.ya"
+      ]
+    },
+    {
+      "id": "word.nûr",
+      "type": "word",
+      "arabic": "نُور",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.damma",
+        "letter.nun.sound",
+        "letter.ra.sound",
+        "letter.waw.sound",
+        "mark.madd.waw"
+      ]
+    },
+    {
+      "id": "contrast.dal_dad",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 21,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.dal.recognize",
+        "letter.dad.recognize"
+      ]
+    },
+    {
+      "id": "contrast.sin_sad",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 21,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.sin.recognize",
+        "letter.sad.recognize"
+      ]
+    },
+    {
+      "id": "contrast.ta_tah",
+      "type": "contrast",
+      "arabic": null,
+      "introduced_on_day": 21,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ta.recognize",
+        "letter.tta.recognize"
+      ]
+    },
+    {
+      "id": "mark.shadda",
+      "type": "mark",
+      "arabic": "ّ",
+      "introduced_on_day": 22,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "word.jadd",
+      "type": "word",
+      "arabic": "جَدّ",
+      "introduced_on_day": 22,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dal.sound",
+        "letter.jim.sound",
+        "mark.shadda"
+      ]
+    },
+    {
+      "id": "word.mudarris",
+      "type": "word",
+      "arabic": "مُدَرِّس",
+      "introduced_on_day": 22,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.damma",
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.dal.sound",
+        "letter.mim.sound",
+        "letter.ra.sound",
+        "letter.sin.sound",
+        "mark.shadda"
+      ]
+    },
+    {
+      "id": "mark.tanwin.an",
+      "type": "mark",
+      "arabic": "ً",
+      "introduced_on_day": 23,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "mark.tanwin.in",
+      "type": "mark",
+      "arabic": "ٍ",
+      "introduced_on_day": 23,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "mark.tanwin.un",
+      "type": "mark",
+      "arabic": "ٌ",
+      "introduced_on_day": 23,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "word.baytan",
+      "type": "word",
+      "arabic": "بَيْتًا",
+      "introduced_on_day": 23,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.ta.sound",
+        "letter.ya.sound",
+        "mark.sukun",
+        "mark.tanwin.an"
+      ]
+    },
+    {
+      "id": "word.kitâbun",
+      "type": "word",
+      "arabic": "كِتَابٌ",
+      "introduced_on_day": 23,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.kaf.sound",
+        "letter.ta.sound",
+        "mark.tanwin.un"
+      ]
+    },
+    {
+      "id": "word.qalamin",
+      "type": "word",
+      "arabic": "قَلَمٍ",
+      "introduced_on_day": 23,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.qaf.sound",
+        "mark.tanwin.in"
+      ]
+    },
+    {
+      "id": "mark.article",
+      "type": "mark",
+      "arabic": "ال",
+      "introduced_on_day": 24,
+      "latency_threshold_ms": 1500,
+      "prerequisites": []
+    },
+    {
+      "id": "word.al-qamar",
+      "type": "word",
+      "arabic": "الْقَمَر",
+      "introduced_on_day": 24,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.qaf.sound",
+        "letter.ra.sound",
+        "mark.article",
+        "mark.sukun"
+      ]
+    },
+    {
+      "id": "word.ash-shams",
+      "type": "word",
+      "arabic": "الشَّمْس",
+      "introduced_on_day": 24,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.shin.sound",
+        "letter.sin.sound",
+        "mark.article",
+        "mark.shadda",
+        "mark.sukun"
+      ]
+    }
+  ]
+}

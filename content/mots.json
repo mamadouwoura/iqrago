@@ -1,0 +1,77 @@
+{
+  "_": "Un mot n'apparaît que si TOUTES ses lettres et TOUTES ses marques sont déjà acquises. Zéro exception. La règle n'est pas déclarative : tools/contenu/contenu.dart valider la vérifie mécaniquement, caractère par caractère.",
+  "version": "1.0.0",
+  "_champs": {
+    "mot": "forme vocalisée, telle qu'affichée",
+    "lettres": "les consonnes/supports, dans l'ordre de lecture",
+    "marques": "harakat et signes présents (fatha, kasra, damma, sukun, shadda, tanwin.*, madd.*, article)",
+    "jour": "jour de déblocage",
+    "sens": "affiché en ancrage sémantique (word_to_meaning_mcq)"
+  },
+
+  "mots": [
+    { "mot": "وَرَد",   "lettres": ["و","ر","د"],         "marques": ["fatha"],                    "translit": "warad",   "sens": "des roses",        "jour": 3 },
+    { "mot": "دَار",    "lettres": ["د","ا","ر"],         "marques": ["fatha"],                    "translit": "dâr",     "sens": "la maison",        "jour": 3 },
+
+    { "mot": "ذُو",     "lettres": ["ذ","و"],             "marques": ["damma"],                    "translit": "dhû",     "sens": "possesseur de",    "jour": 5 },
+
+    { "mot": "زَاد",    "lettres": ["ز","ا","د"],         "marques": ["fatha"],                    "translit": "zâd",     "sens": "il a augmenté",    "jour": 6 },
+    { "mot": "زَار",    "lettres": ["ز","ا","ر"],         "marques": ["fatha"],                    "translit": "zâr",     "sens": "il a visité",      "jour": 6 },
+
+    { "mot": "بَاب",    "lettres": ["ب","ا","ب"],         "marques": ["fatha"],                    "translit": "bâb",     "sens": "la porte",         "jour": 8 },
+    { "mot": "بَرَد",   "lettres": ["ب","ر","د"],         "marques": ["fatha"],                    "translit": "barad",   "sens": "la grêle",         "jour": 8 },
+    { "mot": "ثَابِت",  "lettres": ["ث","ا","ب","ت"],     "marques": ["fatha","kasra"],            "translit": "thâbit",  "sens": "stable",           "jour": 8 },
+
+    { "mot": "حَجَر",   "lettres": ["ح","ج","ر"],         "marques": ["fatha"],                    "translit": "hajar",   "sens": "une pierre",       "jour": 9 },
+    { "mot": "خَرَجَ",  "lettres": ["خ","ر","ج"],         "marques": ["fatha"],                    "translit": "kharaja", "sens": "il est sorti",     "jour": 9 },
+    { "mot": "حَار",    "lettres": ["ح","ا","ر"],         "marques": ["fatha"],                    "translit": "hâr",     "sens": "chaud",            "jour": 9 },
+
+    { "mot": "دَرَسَ",  "lettres": ["د","ر","س"],         "marques": ["fatha"],                    "translit": "darasa",  "sens": "il a étudié",      "jour": 10 },
+    { "mot": "شَجَر",   "lettres": ["ش","ج","ر"],         "marques": ["fatha"],                    "translit": "shajar",  "sens": "des arbres",       "jour": 10 },
+    { "mot": "سَحَاب",  "lettres": ["س","ح","ا","ب"],     "marques": ["fatha"],                    "translit": "sahâb",   "sens": "des nuages",       "jour": 10 },
+
+    { "mot": "جَمَل",   "lettres": ["ج","م","ل"],         "marques": ["fatha"],                    "translit": "jamal",   "sens": "un chameau",       "jour": 11 },
+    { "mot": "مَال",    "lettres": ["م","ا","ل"],         "marques": ["fatha"],                    "translit": "mâl",     "sens": "des biens",        "jour": 11 },
+    { "mot": "سَلَام",  "lettres": ["س","ل","ا","م"],     "marques": ["fatha"],                    "translit": "salâm",   "sens": "la paix",          "jour": 11 },
+
+    { "mot": "نَار",    "lettres": ["ن","ا","ر"],         "marques": ["fatha"],                    "translit": "nâr",     "sens": "le feu",           "jour": 12 },
+    { "mot": "بَنَات",  "lettres": ["ب","ن","ا","ت"],     "marques": ["fatha"],                    "translit": "banât",   "sens": "des filles",       "jour": 12 },
+    { "mot": "يَد",     "lettres": ["ي","د"],             "marques": ["fatha"],                    "translit": "yad",     "sens": "une main",         "jour": 12 },
+
+    { "mot": "كَتَبَ",  "lettres": ["ك","ت","ب"],         "marques": ["fatha"],                    "translit": "kataba",  "sens": "il a écrit",       "jour": 13 },
+    { "mot": "ذَهَبَ",  "lettres": ["ذ","ه","ب"],         "marques": ["fatha"],                    "translit": "dhahaba", "sens": "il est allé",      "jour": 13 },
+    { "mot": "نَهَر",   "lettres": ["ن","ه","ر"],         "marques": ["fatha"],                    "translit": "nahar",   "sens": "un fleuve",        "jour": 13 },
+    { "mot": "كِتَاب",  "lettres": ["ك","ت","ا","ب"],     "marques": ["fatha","kasra"],            "translit": "kitâb",   "sens": "un livre",         "jour": 13 },
+
+    { "mot": "عَمَل",   "lettres": ["ع","م","ل"],         "marques": ["fatha"],                    "translit": "'amal",   "sens": "un travail",       "jour": 15 },
+    { "mot": "سَمِعَ",  "lettres": ["س","م","ع"],         "marques": ["fatha","kasra"],            "translit": "sami'a",  "sens": "il a entendu",     "jour": 15 },
+    { "mot": "غُرَاب",  "lettres": ["غ","ر","ا","ب"],     "marques": ["fatha","damma"],            "translit": "ghurâb",  "sens": "un corbeau",       "jour": 15 },
+
+    { "mot": "قَلَم",   "lettres": ["ق","ل","م"],         "marques": ["fatha"],                    "translit": "qalam",   "sens": "un stylo",         "jour": 16 },
+    { "mot": "قَمَر",   "lettres": ["ق","م","ر"],         "marques": ["fatha"],                    "translit": "qamar",   "sens": "la lune",          "jour": 16 },
+    { "mot": "فَتَحَ",  "lettres": ["ف","ت","ح"],         "marques": ["fatha"],                    "translit": "fataha",  "sens": "il a ouvert",      "jour": 16 },
+
+    { "mot": "صَبَرَ",  "lettres": ["ص","ب","ر"],         "marques": ["fatha"],                    "translit": "sabara",  "sens": "il a patienté",    "jour": 17 },
+    { "mot": "ضَرَبَ",  "lettres": ["ض","ر","ب"],         "marques": ["fatha"],                    "translit": "daraba",  "sens": "il a frappé",      "jour": 17 },
+
+    { "mot": "مَطَر",   "lettres": ["م","ط","ر"],         "marques": ["fatha"],                    "translit": "matar",   "sens": "la pluie",         "jour": 18 },
+    { "mot": "نَظَرَ",  "lettres": ["ن","ظ","ر"],         "marques": ["fatha"],                    "translit": "nazara",  "sens": "il a regardé",     "jour": 18 },
+
+    { "mot": "بَيْت",   "lettres": ["ب","ي","ت"],         "marques": ["fatha","sukun"],            "translit": "bayt",    "sens": "une maison",       "jour": 19 },
+    { "mot": "وَرْد",   "lettres": ["و","ر","د"],         "marques": ["fatha","sukun"],            "translit": "ward",    "sens": "des roses",        "jour": 19 },
+    { "mot": "قَلْب",   "lettres": ["ق","ل","ب"],         "marques": ["fatha","sukun"],            "translit": "qalb",    "sens": "un cœur",          "jour": 19 },
+
+    { "mot": "نُور",    "lettres": ["ن","و","ر"],         "marques": ["damma","madd.waw"],         "translit": "nûr",     "sens": "la lumière",       "jour": 20 },
+    { "mot": "كَبِير",  "lettres": ["ك","ب","ي","ر"],     "marques": ["fatha","kasra","madd.ya"],  "translit": "kabîr",   "sens": "grand",            "jour": 20 },
+
+    { "mot": "جَدّ",    "lettres": ["ج","د"],             "marques": ["fatha","shadda"],           "translit": "jadd",    "sens": "un grand-père",    "jour": 22 },
+    { "mot": "مُدَرِّس", "lettres": ["م","د","ر","س"],     "marques": ["damma","fatha","kasra","shadda"], "translit": "mudarris", "sens": "un enseignant", "jour": 22 },
+
+    { "mot": "كِتَابٌ", "lettres": ["ك","ت","ا","ب"],     "marques": ["kasra","fatha","tanwin.un"], "translit": "kitâbun", "sens": "un livre",        "jour": 23 },
+    { "mot": "بَيْتًا",  "lettres": ["ب","ي","ت","ا"],     "marques": ["fatha","sukun","tanwin.an"], "translit": "baytan",  "sens": "une maison",      "jour": 23, "_note": "l'alif final est le support orthographique du tanwin fathah : il s'écrit mais ne se lit pas. À expliquer au jour 23." },
+    { "mot": "قَلَمٍ",  "lettres": ["ق","ل","م"],         "marques": ["fatha","tanwin.in"],        "translit": "qalamin", "sens": "d'un stylo",       "jour": 23 },
+
+    { "mot": "الْقَمَر", "lettres": ["ا","ل","ق","م","ر"], "marques": ["fatha","sukun","article"],  "translit": "al-qamar", "sens": "la lune (lunaire)", "jour": 24 },
+    { "mot": "الشَّمْس", "lettres": ["ا","ل","ش","م","س"], "marques": ["fatha","sukun","shadda","article"], "translit": "ash-shams", "sens": "le soleil (solaire)", "jour": 24 }
+  ]
+}

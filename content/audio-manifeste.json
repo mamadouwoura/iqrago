@@ -1,0 +1,1001 @@
+{
+  "_": "GÉNÉRÉ. Feuille de route de la journée de studio. Voix humaine native, débit lent et articulé. Jamais de synthèse vocale : l'apprenant imite ce qu'il entend, une référence approximative enseigne une erreur.",
+  "format": "Opus 24 kbps mono, ~4 Ko/s",
+  "total": 158,
+  "audios": [
+    {
+      "fichier": "lettre_dal.opus",
+      "arabe": "د",
+      "a_dire": "le son « d », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_dal_fatha.opus",
+      "arabe": "دَ",
+      "a_dire": "da",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_dal_kasra.opus",
+      "arabe": "دِ",
+      "a_dire": "di",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_dal_damma.opus",
+      "arabe": "دُ",
+      "a_dire": "dou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_dhal.opus",
+      "arabe": "ذ",
+      "a_dire": "le son « dh », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_dhal_fatha.opus",
+      "arabe": "ذَ",
+      "a_dire": "dha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_dhal_kasra.opus",
+      "arabe": "ذِ",
+      "a_dire": "dhi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_dhal_damma.opus",
+      "arabe": "ذُ",
+      "a_dire": "dhou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_ra.opus",
+      "arabe": "ر",
+      "a_dire": "le son « r », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_ra_fatha.opus",
+      "arabe": "رَ",
+      "a_dire": "ra",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ra_kasra.opus",
+      "arabe": "رِ",
+      "a_dire": "ri",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ra_damma.opus",
+      "arabe": "رُ",
+      "a_dire": "rou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_zay.opus",
+      "arabe": "ز",
+      "a_dire": "le son « z », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_zay_fatha.opus",
+      "arabe": "زَ",
+      "a_dire": "za",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_zay_kasra.opus",
+      "arabe": "زِ",
+      "a_dire": "zi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_zay_damma.opus",
+      "arabe": "زُ",
+      "a_dire": "zou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_alif.opus",
+      "arabe": "ا",
+      "a_dire": "le son « â », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_alif_fatha.opus",
+      "arabe": "اَ",
+      "a_dire": "âa",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_alif_kasra.opus",
+      "arabe": "اِ",
+      "a_dire": "âi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_alif_damma.opus",
+      "arabe": "اُ",
+      "a_dire": "âou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_waw.opus",
+      "arabe": "و",
+      "a_dire": "le son « w », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_waw_fatha.opus",
+      "arabe": "وَ",
+      "a_dire": "wa",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_waw_kasra.opus",
+      "arabe": "وِ",
+      "a_dire": "wi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_waw_damma.opus",
+      "arabe": "وُ",
+      "a_dire": "wou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_ba.opus",
+      "arabe": "ب",
+      "a_dire": "le son « b », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_ba_fatha.opus",
+      "arabe": "بَ",
+      "a_dire": "ba",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ba_kasra.opus",
+      "arabe": "بِ",
+      "a_dire": "bi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ba_damma.opus",
+      "arabe": "بُ",
+      "a_dire": "bou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_ta.opus",
+      "arabe": "ت",
+      "a_dire": "le son « t », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_ta_fatha.opus",
+      "arabe": "تَ",
+      "a_dire": "ta",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ta_kasra.opus",
+      "arabe": "تِ",
+      "a_dire": "ti",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ta_damma.opus",
+      "arabe": "تُ",
+      "a_dire": "tou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_tha.opus",
+      "arabe": "ث",
+      "a_dire": "le son « th », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_tha_fatha.opus",
+      "arabe": "ثَ",
+      "a_dire": "tha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_tha_kasra.opus",
+      "arabe": "ثِ",
+      "a_dire": "thi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_tha_damma.opus",
+      "arabe": "ثُ",
+      "a_dire": "thou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_jim.opus",
+      "arabe": "ج",
+      "a_dire": "le son « j », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_jim_fatha.opus",
+      "arabe": "جَ",
+      "a_dire": "ja",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_jim_kasra.opus",
+      "arabe": "جِ",
+      "a_dire": "ji",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_jim_damma.opus",
+      "arabe": "جُ",
+      "a_dire": "jou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_hha.opus",
+      "arabe": "ح",
+      "a_dire": "le son « h », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_hha_fatha.opus",
+      "arabe": "حَ",
+      "a_dire": "ha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_hha_kasra.opus",
+      "arabe": "حِ",
+      "a_dire": "hi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_hha_damma.opus",
+      "arabe": "حُ",
+      "a_dire": "hou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_kha.opus",
+      "arabe": "خ",
+      "a_dire": "le son « kh », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_kha_fatha.opus",
+      "arabe": "خَ",
+      "a_dire": "kha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_kha_kasra.opus",
+      "arabe": "خِ",
+      "a_dire": "khi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_kha_damma.opus",
+      "arabe": "خُ",
+      "a_dire": "khou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_sin.opus",
+      "arabe": "س",
+      "a_dire": "le son « s », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_sin_fatha.opus",
+      "arabe": "سَ",
+      "a_dire": "sa",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_sin_kasra.opus",
+      "arabe": "سِ",
+      "a_dire": "si",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_sin_damma.opus",
+      "arabe": "سُ",
+      "a_dire": "sou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_shin.opus",
+      "arabe": "ش",
+      "a_dire": "le son « sh », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_shin_fatha.opus",
+      "arabe": "شَ",
+      "a_dire": "sha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_shin_kasra.opus",
+      "arabe": "شِ",
+      "a_dire": "shi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_shin_damma.opus",
+      "arabe": "شُ",
+      "a_dire": "shou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_lam.opus",
+      "arabe": "ل",
+      "a_dire": "le son « l », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_lam_fatha.opus",
+      "arabe": "لَ",
+      "a_dire": "la",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_lam_kasra.opus",
+      "arabe": "لِ",
+      "a_dire": "li",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_lam_damma.opus",
+      "arabe": "لُ",
+      "a_dire": "lou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_mim.opus",
+      "arabe": "م",
+      "a_dire": "le son « m », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_mim_fatha.opus",
+      "arabe": "مَ",
+      "a_dire": "ma",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_mim_kasra.opus",
+      "arabe": "مِ",
+      "a_dire": "mi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_mim_damma.opus",
+      "arabe": "مُ",
+      "a_dire": "mou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_nun.opus",
+      "arabe": "ن",
+      "a_dire": "le son « n », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_nun_fatha.opus",
+      "arabe": "نَ",
+      "a_dire": "na",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_nun_kasra.opus",
+      "arabe": "نِ",
+      "a_dire": "ni",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_nun_damma.opus",
+      "arabe": "نُ",
+      "a_dire": "nou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_ya.opus",
+      "arabe": "ي",
+      "a_dire": "le son « y », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_ya_fatha.opus",
+      "arabe": "يَ",
+      "a_dire": "ya",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ya_kasra.opus",
+      "arabe": "يِ",
+      "a_dire": "yi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ya_damma.opus",
+      "arabe": "يُ",
+      "a_dire": "you",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_kaf.opus",
+      "arabe": "ك",
+      "a_dire": "le son « k », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_kaf_fatha.opus",
+      "arabe": "كَ",
+      "a_dire": "ka",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_kaf_kasra.opus",
+      "arabe": "كِ",
+      "a_dire": "ki",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_kaf_damma.opus",
+      "arabe": "كُ",
+      "a_dire": "kou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_hah.opus",
+      "arabe": "ه",
+      "a_dire": "le son « h », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_hah_fatha.opus",
+      "arabe": "هَ",
+      "a_dire": "ha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_hah_kasra.opus",
+      "arabe": "هِ",
+      "a_dire": "hi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_hah_damma.opus",
+      "arabe": "هُ",
+      "a_dire": "hou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_ayn.opus",
+      "arabe": "ع",
+      "a_dire": "le son « 'a », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_ayn_fatha.opus",
+      "arabe": "عَ",
+      "a_dire": "'aa",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ayn_kasra.opus",
+      "arabe": "عِ",
+      "a_dire": "'ai",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ayn_damma.opus",
+      "arabe": "عُ",
+      "a_dire": "'aou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_ghayn.opus",
+      "arabe": "غ",
+      "a_dire": "le son « gh », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_ghayn_fatha.opus",
+      "arabe": "غَ",
+      "a_dire": "gha",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ghayn_kasra.opus",
+      "arabe": "غِ",
+      "a_dire": "ghi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_ghayn_damma.opus",
+      "arabe": "غُ",
+      "a_dire": "ghou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_fa.opus",
+      "arabe": "ف",
+      "a_dire": "le son « f », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_fa_fatha.opus",
+      "arabe": "فَ",
+      "a_dire": "fa",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_fa_kasra.opus",
+      "arabe": "فِ",
+      "a_dire": "fi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_fa_damma.opus",
+      "arabe": "فُ",
+      "a_dire": "fou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_qaf.opus",
+      "arabe": "ق",
+      "a_dire": "le son « q », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_qaf_fatha.opus",
+      "arabe": "قَ",
+      "a_dire": "qa",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_qaf_kasra.opus",
+      "arabe": "قِ",
+      "a_dire": "qi",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_qaf_damma.opus",
+      "arabe": "قُ",
+      "a_dire": "qou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_sad.opus",
+      "arabe": "ص",
+      "a_dire": "le son « s. », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_sad_fatha.opus",
+      "arabe": "صَ",
+      "a_dire": "s.a",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_sad_kasra.opus",
+      "arabe": "صِ",
+      "a_dire": "s.i",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_sad_damma.opus",
+      "arabe": "صُ",
+      "a_dire": "s.ou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_dad.opus",
+      "arabe": "ض",
+      "a_dire": "le son « d. », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_dad_fatha.opus",
+      "arabe": "ضَ",
+      "a_dire": "d.a",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_dad_kasra.opus",
+      "arabe": "ضِ",
+      "a_dire": "d.i",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_dad_damma.opus",
+      "arabe": "ضُ",
+      "a_dire": "d.ou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_tta.opus",
+      "arabe": "ط",
+      "a_dire": "le son « t. », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_tta_fatha.opus",
+      "arabe": "طَ",
+      "a_dire": "t.a",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_tta_kasra.opus",
+      "arabe": "طِ",
+      "a_dire": "t.i",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_tta_damma.opus",
+      "arabe": "طُ",
+      "a_dire": "t.ou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "lettre_zah.opus",
+      "arabe": "ظ",
+      "a_dire": "le son « z. », pas le nom de la lettre",
+      "categorie": "lettre"
+    },
+    {
+      "fichier": "syllabe_zah_fatha.opus",
+      "arabe": "ظَ",
+      "a_dire": "z.a",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_zah_kasra.opus",
+      "arabe": "ظِ",
+      "a_dire": "z.i",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "syllabe_zah_damma.opus",
+      "arabe": "ظُ",
+      "a_dire": "z.ou",
+      "categorie": "syllabe"
+    },
+    {
+      "fichier": "mot_warad.opus",
+      "arabe": "وَرَد",
+      "a_dire": "warad",
+      "sens": "des roses",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_dâr.opus",
+      "arabe": "دَار",
+      "a_dire": "dâr",
+      "sens": "la maison",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_dhû.opus",
+      "arabe": "ذُو",
+      "a_dire": "dhû",
+      "sens": "possesseur de",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_zâd.opus",
+      "arabe": "زَاد",
+      "a_dire": "zâd",
+      "sens": "il a augmenté",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_zâr.opus",
+      "arabe": "زَار",
+      "a_dire": "zâr",
+      "sens": "il a visité",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_bâb.opus",
+      "arabe": "بَاب",
+      "a_dire": "bâb",
+      "sens": "la porte",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_barad.opus",
+      "arabe": "بَرَد",
+      "a_dire": "barad",
+      "sens": "la grêle",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_thâbit.opus",
+      "arabe": "ثَابِت",
+      "a_dire": "thâbit",
+      "sens": "stable",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hajar.opus",
+      "arabe": "حَجَر",
+      "a_dire": "hajar",
+      "sens": "une pierre",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kharaja.opus",
+      "arabe": "خَرَجَ",
+      "a_dire": "kharaja",
+      "sens": "il est sorti",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hâr.opus",
+      "arabe": "حَار",
+      "a_dire": "hâr",
+      "sens": "chaud",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_darasa.opus",
+      "arabe": "دَرَسَ",
+      "a_dire": "darasa",
+      "sens": "il a étudié",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_shajar.opus",
+      "arabe": "شَجَر",
+      "a_dire": "shajar",
+      "sens": "des arbres",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_sahâb.opus",
+      "arabe": "سَحَاب",
+      "a_dire": "sahâb",
+      "sens": "des nuages",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_jamal.opus",
+      "arabe": "جَمَل",
+      "a_dire": "jamal",
+      "sens": "un chameau",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_mâl.opus",
+      "arabe": "مَال",
+      "a_dire": "mâl",
+      "sens": "des biens",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_salâm.opus",
+      "arabe": "سَلَام",
+      "a_dire": "salâm",
+      "sens": "la paix",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nâr.opus",
+      "arabe": "نَار",
+      "a_dire": "nâr",
+      "sens": "le feu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_banât.opus",
+      "arabe": "بَنَات",
+      "a_dire": "banât",
+      "sens": "des filles",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_yad.opus",
+      "arabe": "يَد",
+      "a_dire": "yad",
+      "sens": "une main",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kataba.opus",
+      "arabe": "كَتَبَ",
+      "a_dire": "kataba",
+      "sens": "il a écrit",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_dhahaba.opus",
+      "arabe": "ذَهَبَ",
+      "a_dire": "dhahaba",
+      "sens": "il est allé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nahar.opus",
+      "arabe": "نَهَر",
+      "a_dire": "nahar",
+      "sens": "un fleuve",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kitâb.opus",
+      "arabe": "كِتَاب",
+      "a_dire": "kitâb",
+      "sens": "un livre",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_'amal.opus",
+      "arabe": "عَمَل",
+      "a_dire": "'amal",
+      "sens": "un travail",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_sami'a.opus",
+      "arabe": "سَمِعَ",
+      "a_dire": "sami'a",
+      "sens": "il a entendu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_ghurâb.opus",
+      "arabe": "غُرَاب",
+      "a_dire": "ghurâb",
+      "sens": "un corbeau",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_qalam.opus",
+      "arabe": "قَلَم",
+      "a_dire": "qalam",
+      "sens": "un stylo",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_qamar.opus",
+      "arabe": "قَمَر",
+      "a_dire": "qamar",
+      "sens": "la lune",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_fataha.opus",
+      "arabe": "فَتَحَ",
+      "a_dire": "fataha",
+      "sens": "il a ouvert",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_sabara.opus",
+      "arabe": "صَبَرَ",
+      "a_dire": "sabara",
+      "sens": "il a patienté",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_daraba.opus",
+      "arabe": "ضَرَبَ",
+      "a_dire": "daraba",
+      "sens": "il a frappé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_matar.opus",
+      "arabe": "مَطَر",
+      "a_dire": "matar",
+      "sens": "la pluie",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nazara.opus",
+      "arabe": "نَظَرَ",
+      "a_dire": "nazara",
+      "sens": "il a regardé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_bayt.opus",
+      "arabe": "بَيْت",
+      "a_dire": "bayt",
+      "sens": "une maison",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_ward.opus",
+      "arabe": "وَرْد",
+      "a_dire": "ward",
+      "sens": "des roses",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_qalb.opus",
+      "arabe": "قَلْب",
+      "a_dire": "qalb",
+      "sens": "un cœur",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nûr.opus",
+      "arabe": "نُور",
+      "a_dire": "nûr",
+      "sens": "la lumière",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kabîr.opus",
+      "arabe": "كَبِير",
+      "a_dire": "kabîr",
+      "sens": "grand",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_jadd.opus",
+      "arabe": "جَدّ",
+      "a_dire": "jadd",
+      "sens": "un grand-père",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_mudarris.opus",
+      "arabe": "مُدَرِّس",
+      "a_dire": "mudarris",
+      "sens": "un enseignant",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kitâbun.opus",
+      "arabe": "كِتَابٌ",
+      "a_dire": "kitâbun",
+      "sens": "un livre",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_baytan.opus",
+      "arabe": "بَيْتًا",
+      "a_dire": "baytan",
+      "sens": "une maison",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_qalamin.opus",
+      "arabe": "قَلَمٍ",
+      "a_dire": "qalamin",
+      "sens": "d'un stylo",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_al-qamar.opus",
+      "arabe": "الْقَمَر",
+      "a_dire": "al-qamar",
+      "sens": "la lune (lunaire)",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_ash-shams.opus",
+      "arabe": "الشَّمْس",
+      "a_dire": "ash-shams",
+      "sens": "le soleil (solaire)",
+      "categorie": "mot"
+    }
+  ]
+}

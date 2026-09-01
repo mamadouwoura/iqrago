@@ -1,0 +1,34 @@
+# --- secrets. Jamais dans le dépôt (§49).
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# --- Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.sqlite3
+
+# --- Django
+staticfiles/
+media/
+
+# --- Flutter / Dart
+.dart_tool/
+build/
+*.iml
+.idea/
+.flutter-plugins*
+
+# --- OS et éditeurs
+Thumbs.db
+desktop.ini
+.DS_Store
+*.swp
+
+# --- archives de travail
+*.zip
