@@ -3,7 +3,7 @@
 Django 5.2 · DRF · PostgreSQL 17 · Celery/Redis.
 Architecture : [../docs/00-blueprint.md](../docs/00-blueprint.md) §18 · Schéma : [../docs/02-donnees.md](../docs/02-donnees.md) · API : [../docs/03-api.md](../docs/03-api.md)
 
-**État : étapes 5, 8, 9, 10 terminées ; Docker et CI écrits, non exécutés.** Socle sur PostgreSQL, catalogue peuplé (283 compétences, 506 prérequis, 30 leçons, 158 médias), API REST et authentification en service, moteur de séance et répétition espacée opérationnels. **122 tests**, `check --deploy` sans avertissement. Ce qui n'est pas encore là est listé en fin de document.
+**État : bloc B terminé, CI verte.** Socle sur PostgreSQL, catalogue peuplé (283 compétences, 506 prérequis, 30 leçons, 158 médias), API REST et authentification en service, moteur de séance et répétition espacée opérationnels. **122 tests**, `check --deploy` sans avertissement, image Docker construite et démarrée en intégration continue. Ce qui n'est pas encore là est listé en fin de document.
 
 ---
 
@@ -300,5 +300,4 @@ Le travail « Image » ne se contente pas de construire : **construire une image
 | Séances riches | Le moteur tourne, mais sans exercices une séance ne propose qu'un item par compétence — voir « une limite connue » |
 | Diagnostic initial et évaluation du jour 30 | Plus tard |
 | Facturation | `common/acces.py` ouvre les jours 1-3 et refuse le reste : c'est réel, mais aucun moyen de payer n'existe |
-| **Docker** | **Écrit, jamais construit** — Docker n'est pas installé sur le poste de développement. Le `Dockerfile` sera vérifié par la CI, sur les exécuteurs GitHub |
-| **CI** | **Écrite, jamais exécutée** — il faut un dépôt distant. Voir la section Docker ci-dessus |
+| Docker en local | Non installé sur le poste de développement (8 Go de RAM). L'image est construite et démarrée **par la CI**, sur les exécuteurs GitHub — c'est là qu'elle est vérifiée |

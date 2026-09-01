@@ -52,18 +52,22 @@ Les douze décisions sont tranchées ([05-decisions.md](05-decisions.md)).
 **4. Journée de studio.** Les ~180 audios de référence.
 → *Pourquoi tôt :* c'est un rendez-vous physique à caler, et rien de sonore ne peut être testé avant.
 
-### Bloc B — Socle (semaines 4-6)
+### Bloc B — Socle ✅ TERMINÉ (31/08 – 01/09/2026)
 
-**5. Squelette Django.** `config/settings/{base,dev,staging,prod}`, `User` personnalisé, première migration.
-→ [D8](05-decisions.md#d8--modèle-user-personnalisé-au-premier-commit) : le `User` doit être là avant `migrate`. C'est le seul point irréversible du projet.
+**5. Squelette Django.** ✅ `config/settings/{base,dev,staging,prod}`, `User` personnalisé (e-mail **ou** téléphone, UUID, Argon2), `ConsentRecord`, première migration sur PostgreSQL 17.
+→ [D8](05-decisions.md#d8--modèle-user-personnalisé-au-premier-commit) respecté : le `User` était là avant `migrate`.
 
-**6. Docker Compose + CI.** Les cinq conteneurs, GitHub Actions (lint, tests, `check --deploy`).
-→ *Pourquoi maintenant :* mettre en place l'intégration continue après coup, c'est la mettre en place sur un projet qui ne passe déjà plus.
+**8. Catalogue + admin + `ContentVersion`.** ✅ Fait **avant** l'auth, contrairement au plan initial — l'admin Django fonctionne en session et n'a pas besoin de JWT, donc il débloque la personne en charge du contenu une étape plus tôt.
+→ Import du socle : 283 compétences, 506 prérequis, 30 leçons, 158 médias. Cycle éditorial `draft → review → approved → published` avec immuabilité après publication.
 
-**7. Auth + JWT + `/me` + consentements.** Avec les tests.
+**7. Auth + JWT + `/me` + consentements.** ✅ Plus l'API REST du catalogue. Backend d'authentification dédié pour la connexion par numéro.
 
-**8. Modèles du catalogue + admin Django + `ContentVersion`.**
-→ *Livrable :* la personne en charge du contenu peut commencer à saisir. Elle n'attend plus le développement à partir d'ici — c'est tout l'objet de ce séquencement.
+**10. Progression.** ✅ `MasteryState`, répétition espacée, composition de séance, synchronisation idempotente.
+
+**6. Docker + CI.** ✅ `Dockerfile` multi-étapes, `docker-compose` à quatre services, GitHub Actions : style, tests sur PostgreSQL 17, `makemigrations --check`, `check --deploy`, construction de l'image **et démarrage réel du conteneur**.
+→ *Fait en dernier, et non en premier comme prévu :* Docker n'est pas installable confortablement sur le poste (8 Go de RAM). C'est la CI qui construit et démarre l'image, sur les exécuteurs GitHub. Verte au premier passage.
+
+**Bilan : 122 tests, dépôt sous contrôle de version, CI verte.**
 
 ### Bloc C — Tranche verticale (semaines 7-9)
 

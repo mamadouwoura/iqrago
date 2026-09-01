@@ -2,7 +2,9 @@
 
 Coach personnel intelligent pour apprendre à lire l'arabe.
 
-**État : blueprint arbitré, rendu arabe tranché. Production du contenu en cours.**
+**État : backend fonctionnel, CI verte. Le contenu est désormais le chemin critique.**
+
+[![CI](https://github.com/mamadouwoura/iqrago/actions/workflows/ci.yml/badge.svg)](https://github.com/mamadouwoura/iqrago/actions/workflows/ci.yml)
 
 ## Documents
 
@@ -29,9 +31,10 @@ Coach personnel intelligent pour apprendre à lire l'arabe.
 
 - Les douze décisions d'architecture sont arbitrées.
 - Le programme pédagogique retenu est la **variante B** : premier mot lu au jour 3.
-- **Étape 1 terminée** : 720 mesures Flutter. Police retenue — **Noto Naskh Arabic, `height: 1.5`**, seule configuration à 0,00 px de débordement.
-- ⚠️ `height: 1.0` rogne sur les trois polices, jusqu'à 31 px. C'est la valeur à ne jamais écrire.
-- **Prochaine action :** production du contenu pédagogique (`content/`) — le chemin critique du projet.
+- **Rendu arabe tranché** : **Noto Naskh Arabic, `height: 1.5`** — seule configuration sur 720 mesures à 0,00 px de débordement. ⚠️ `height: 1.0` rogne sur les trois polices, jusqu'à 31 px : la valeur à ne jamais écrire.
+- **Backend fonctionnel** : Django 5.2 sur PostgreSQL 17 — comptes (e-mail ou téléphone), catalogue avec cycle éditorial, moteur de séance et répétition espacée, API REST. **122 tests**, CI verte, image Docker construite et démarrée en intégration continue.
+- **Zéro exercice en base.** Le catalogue les accueille, l'admin permet de les créer, relire et publier — il n'y en a aucun. C'est ce qui limite les séances à un item par compétence.
+- **Prochaine action :** production du contenu pédagogique — ~850 exercices, ~158 audios.
 
 ## Deux chantiers à lancer en parallèle du développement
 
