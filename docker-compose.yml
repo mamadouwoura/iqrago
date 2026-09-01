@@ -1,0 +1,70 @@
+# Développement et préproduction.
+#
+# Quatre services : `speech` viendra quand le service existera — l'ajouter
+# maintenant donnerait l'illusion d'un traitement vocal qui n'est pas écrit.
+
+name: iqrago
+
+services:
+  postgres:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-iqrago}
+      POSTGRES_USER: ${POSTGRES_USER:-iqrago}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?mot de passe requis}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      # `api` attend que la base accepte réellement les connexions : sans
+      # cela, les migrations démarrent sur un serveur qui n'écoute pas encore.
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-iqrago} -d ${POSTGRES_DB:-iqrago}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "", "--appendonly", "no"]
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./backend
+      args:
+        REQUIREMENTS: ${REQUIREMENTS:-requirements/prod.txt}
+    env_file: [.env.docker]
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-iqrago}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-iqrago}
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    ports: ["8000:8000"]
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: ./backend
+      args:
+        REQUIREMENTS: ${REQUIREMENTS:-requirements/prod.txt}
+    # Aucune tâche n'est encore écrite : le worker démarre, consomme une file
+    # vide, et attend. Il est là pour que la chaîne soit prête, pas pour
+    # laisser croire qu'un traitement asynchrone tourne.
+    command: ["celery", "-A", "config", "worker", "-l", "info", "--concurrency", "2"]
+    env_file: [.env.docker]
+    environment:
+      DATABASE_URL: postgres://${POSTGRES_USER:-iqrago}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB:-iqrago}
+      REDIS_URL: redis://redis:6379/0
+    depends_on:
+      postgres: {condition: service_healthy}
+      redis: {condition: service_healthy}
+    restart: unless-stopped
+
+volumes:
+  pgdata:

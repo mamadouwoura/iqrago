@@ -9,7 +9,10 @@ DEBUG = False
 
 # --- Transport
 
-SECURE_SSL_REDIRECT = True
+# Pilotable : derrière un proxy qui termine déjà TLS, ou dans un conteneur
+# qu'on sonde en HTTP, la redirection doit pouvoir être désactivée. Par
+# défaut elle est active — c'est le réglage sûr.
+SECURE_SSL_REDIRECT = env.bool("SECURE_SSL_REDIRECT", default=True)
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True

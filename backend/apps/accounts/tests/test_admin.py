@@ -86,3 +86,27 @@ def test_consentement_non_modifiable_depuis_admin(admin_client):
 def test_health_sans_authentification():
     """La sonde doit répondre sans jeton : un orchestrateur ne s'authentifie pas."""
     assert Client().get("/api/v1/health").json() == {"status": "ok"}
+
+
+def test_sonde_repond_base_injoignable(settings):
+    """La sonde ne doit toucher aucune base.
+
+    `ATOMIC_REQUESTS = True` ouvre une transaction sur chaque requête : sans
+    `non_atomic_requests` sur la vue, une brève indisponibilité de PostgreSQL
+    ferait échouer la sonde, l'orchestrateur tuerait des conteneurs sains, et
+    un hoquet de la base deviendrait une panne du service.
+    """
+    from django.db import connections
+
+    from config.urls import health
+
+    assert getattr(health, "_non_atomic_requests", None), (
+        "la vue health doit porter @transaction.non_atomic_requests"
+    )
+    # Et la vue elle-même ne fait aucune requête.
+    with connections["default"].execute_wrapper(
+        lambda *a: pytest.fail("la sonde a interrogé la base")
+    ):
+        from django.test import RequestFactory
+        r = health(RequestFactory().get("/api/v1/health"))
+    assert r.status_code == 200

@@ -3,7 +3,7 @@
 Django 5.2 · DRF · PostgreSQL 17 · Celery/Redis.
 Architecture : [../docs/00-blueprint.md](../docs/00-blueprint.md) §18 · Schéma : [../docs/02-donnees.md](../docs/02-donnees.md) · API : [../docs/03-api.md](../docs/03-api.md)
 
-**État : étapes 5, 8, 9 et 10 terminées.** Socle sur PostgreSQL, catalogue peuplé (283 compétences, 506 prérequis, 30 leçons, 158 médias), API REST et authentification en service, moteur de séance et répétition espacée opérationnels. **121 tests.** Ce qui n'est pas encore là est listé en fin de document.
+**État : étapes 5, 8, 9, 10 terminées ; Docker et CI écrits, non exécutés.** Socle sur PostgreSQL, catalogue peuplé (283 compétences, 506 prérequis, 30 leçons, 158 médias), API REST et authentification en service, moteur de séance et répétition espacée opérationnels. **122 tests**, `check --deploy` sans avertissement. Ce qui n'est pas encore là est listé en fin de document.
 
 ---
 
@@ -226,6 +226,44 @@ Sans exercices en base, une séance ne propose qu'**un item par compétence**. L
 
 Trois items pour une séance de quinze minutes, c'est trop peu. La réponse n'est pas d'assouplir le verrou de prérequis mais de produire le contenu : trois exercices par compétence donnent neuf items pour ces mêmes trois compétences. Le moteur les servira sans modification.
 
+---
+
+## Docker
+
+```bash
+cp .env.docker.example .env.docker
+```
+
+```bash
+docker compose up --build
+```
+
+Quatre services : `postgres`, `redis`, `api`, `worker`. Le service `speech` viendra quand le code existera — l'ajouter maintenant donnerait l'illusion d'un traitement vocal qui n'est pas écrit.
+
+**Les migrations ne tournent pas au démarrage du conteneur.** C'est délibéré : avec plusieurs répliques, un `migrate` automatique au boot les fait courir en concurrence sur le même schéma. Elles restent une étape contrôlée (§49) :
+
+```bash
+docker compose run --rm api python manage.py migrate
+```
+
+**L'image tourne sous un utilisateur non privilégié** (`uid 10001`). Le `.dockerignore` exclut `.env` : les secrets viennent de l'environnement d'exécution, jamais d'une couche d'image.
+
+`SECURE_SSL_REDIRECT` est pilotable par l'environnement, à `True` par défaut. Sans cela, une sonde HTTP dans un conteneur derrière un proxy qui termine déjà TLS recevrait une redirection et échouerait.
+
+## Intégration continue
+
+`.github/workflows/ci.yml` — trois travaux :
+
+| Travail | Contenu |
+|---|---|
+| **Style** | `ruff check` |
+| **Tests** | PostgreSQL 17 en service · `makemigrations --check` · `pytest` · `check --deploy --fail-level WARNING` |
+| **Image** | Construction du `Dockerfile`, puis **démarrage réel du conteneur** et interrogation de la sonde |
+
+`makemigrations --check` détecte un modèle modifié sans migration correspondante — cas qui passe les tests et casse le déploiement.
+
+Le travail « Image » ne se contente pas de construire : **construire une image ne prouve pas qu'elle démarre**. Il la lance et attend une réponse de `/api/v1/health`.
+
 ### Réglages par environnement
 
 `DJANGO_SETTINGS_MODULE` vaut `config.settings.dev` par défaut (`manage.py`), et `config.settings.prod` pour WSGI/ASGI. La configuration passe par des variables d'environnement, jamais par une branche conditionnelle dans le code.
@@ -260,5 +298,5 @@ Trois items pour une séance de quinze minutes, c'est trop peu. La réponse n'es
 | Séances riches | Le moteur tourne, mais sans exercices une séance ne propose qu'un item par compétence — voir « une limite connue » |
 | Diagnostic initial et évaluation du jour 30 | Plus tard |
 | Facturation | `common/acces.py` ouvre les jours 1-3 et refuse le reste : c'est réel, mais aucun moyen de payer n'existe |
-| Docker, CI | Après, quand Docker sera installé |
-| `check --deploy` | Non vérifié : exige les variables d'environnement de production |
+| **Docker** | **Écrit, jamais construit** — Docker n'est pas installé sur le poste de développement. Le `Dockerfile` sera vérifié par la CI, sur les exécuteurs GitHub |
+| **CI** | **Écrite, jamais exécutée** — il faut un dépôt distant. Voir la section Docker ci-dessus |

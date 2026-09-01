@@ -1,0 +1,134 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHON_VERSION: "3.13"
+
+jobs:
+  lint:
+    name: Style
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+      - run: pip install ruff==0.9.*
+      - run: ruff check .
+        working-directory: backend
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-latest
+
+    # Les tests tournent sur PostgreSQL, jamais sur SQLite : les contraintes
+    # CHECK, les index partiels et `nulls_distinct` ne se comportent pas
+    # pareil, et un test vert sur SQLite ne prouve rien sur la base de
+    # production.
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: iqrago
+          POSTGRES_USER: iqrago
+          POSTGRES_PASSWORD: iqrago_ci
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U iqrago"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+
+    env:
+      SECRET_KEY: ci-uniquement-cle-de-test-longue-de-plus-de-cinquante-caracteres
+      DEBUG: "True"
+      DATABASE_URL: postgres://iqrago:iqrago_ci@127.0.0.1:5432/iqrago
+      REDIS_URL: redis://127.0.0.1:6379/0
+      ALLOWED_HOSTS: localhost,127.0.0.1
+      CORS_ALLOWED_ORIGINS: http://localhost:3000
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+          cache-dependency-path: backend/requirements/*.txt
+
+      - name: Dépendances
+        working-directory: backend
+        run: pip install -r requirements/dev.txt
+
+      - name: Migrations sans dérive
+        working-directory: backend
+        # Un modèle modifié sans migration correspondante passe les tests et
+        # casse le déploiement. `--check` le détecte ici.
+        run: python manage.py makemigrations --check --dry-run
+
+      - name: Tests
+        working-directory: backend
+        run: pytest -q
+
+      - name: Contrôles de déploiement
+        working-directory: backend
+        env:
+          DJANGO_SETTINGS_MODULE: config.settings.prod
+          DEBUG: "False"
+          ALLOWED_HOSTS: iqrago.example
+          CSRF_TRUSTED_ORIGINS: https://iqrago.example
+          # 50 caractères minimum, sinon security.W009 fait échouer le contrôle.
+          SECRET_KEY: ci-uniquement-cle-de-test-longue-de-plus-de-cinquante-caracteres
+        run: python manage.py check --deploy --fail-level WARNING
+
+  docker:
+    name: Image
+    runs-on: ubuntu-latest
+    needs: [lint, tests]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Construire l'image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./backend
+          push: false
+          load: true
+          tags: iqrago-api:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: L'image démarre et répond
+        # Construire une image ne prouve pas qu'elle tourne. On la démarre
+        # sans base — la sonde de vivacité ne touche pas PostgreSQL,
+        # précisément pour répondre pendant un redémarrage de la base.
+        run: |
+          docker run -d --name api-ci -p 8000:8000 \
+            -e SECRET_KEY=ci-uniquement-cle-de-test-longue-de-plus-de-cinquante-caracteres \
+            -e DEBUG=False \
+            -e ALLOWED_HOSTS=127.0.0.1,localhost \
+            -e DATABASE_URL=postgres://x:x@127.0.0.1:5432/x \
+            -e SECURE_SSL_REDIRECT=False \
+            iqrago-api:ci
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8000/api/v1/health; then
+              echo "" && echo "sonde OK" && exit 0
+            fi
+            sleep 2
+          done
+          echo "l'image n'a pas répondu :" && docker logs api-ci && exit 1
+
+      - name: Journaux en cas d'échec
+        if: failure()
+        run: docker logs api-ci || true

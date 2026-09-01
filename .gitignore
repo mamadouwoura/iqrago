@@ -32,3 +32,4 @@ desktop.ini
 
 # --- archives de travail
 *.zip
+.env.docker

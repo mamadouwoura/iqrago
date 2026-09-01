@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+*.sqlite3
+staticfiles/
+media/
+# Le .env n'entre JAMAIS dans une image : les secrets viennent de
+# l'environnement d'exécution, pas d'un fichier gravé dans une couche.
+.env
+.env.*
+!.env.example
