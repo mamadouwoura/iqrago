@@ -34,8 +34,10 @@ rencontre ainsi les mêmes limites de droits que la production, et les erreurs
 de permission se voient tout de suite au lieu d'apparaître au déploiement.
 
 ```bash
-psql -U postgres -c "CREATE ROLE iqrago WITH LOGIN PASSWORD 'iqrago_dev' CREATEDB;"
+psql -U postgres -c "CREATE ROLE iqrago WITH LOGIN PASSWORD 'choisis-un-mot-de-passe' CREATEDB;"
 ```
+
+Choisis-en un et reporte-le dans `DATABASE_URL` (étape 3). Aucun mot de passe réel n'est écrit dans ce dépôt, même pour du développement local : un identifiant publié finit toujours par être réutilisé ailleurs.
 
 ```bash
 psql -U postgres -c "CREATE DATABASE iqrago OWNER iqrago ENCODING 'UTF8';"
