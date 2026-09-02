@@ -17,6 +17,11 @@ Les deux fichiers générés ne s'éditent **jamais** à la main. Ajouter une le
 
 ---
 
+## Comment le contenu se produit
+
+Le processus complet — ce qui se génère, ce qui se saisit, qui valide quoi, et
+en combien de temps — est décrit dans [PRODUCTION.md](PRODUCTION.md).
+
 ## Le cycle de travail
 
 ```
