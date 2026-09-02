@@ -109,3 +109,35 @@ def test_hesitations_comptees_separement():
     m = MasteryState(level=N.FRAGILE)
     srs.appliquer(m, juste=True, latence_ms=9000, seuil_ms=2000, aujourdhui=AUJ)
     assert m.correct_count == 1 and m.hesitation_count == 1
+
+
+# ------------------------------------------- la première rencontre est lente
+
+
+def test_premiere_rencontre_lente_fait_quand_meme_monter():
+    """Découvrir une lettre est nécessairement lent.
+
+    Pénaliser cette lenteur-là bloquerait l'apprenant au niveau 0
+    indéfiniment : il ne peut pas répondre vite à ce qu'il voit pour la
+    première fois. Le seuil mesure l'automatisation — une notion qui n'a de
+    sens que sur ce qu'on connaît déjà.
+
+    Défaut trouvé en jouant une vraie séance dans l'application : dix
+    secondes de réponse, et la maîtrise restait à 0.
+    """
+    m = MasteryState(level=N.INCONNUE)
+    _, apres, hesitation = srs.appliquer(
+        m, juste=True, latence_ms=10_000, seuil_ms=1500, aujourdhui=AUJ
+    )
+    assert hesitation, "la lenteur est bien constatée"
+    assert apres == N.DECOUVERTE, "mais elle ne bloque pas la découverte"
+
+
+def test_lenteur_penalisee_des_le_niveau_1():
+    """Au-delà de la découverte, la règle reprend : c'est là qu'elle produit
+    de la fluidité au lieu d'une simple exactitude."""
+    m = MasteryState(level=N.DECOUVERTE)
+    _, apres, _ = srs.appliquer(
+        m, juste=True, latence_ms=10_000, seuil_ms=1500, aujourdhui=AUJ
+    )
+    assert apres == N.DECOUVERTE, "juste mais lent ne fait pas monter"

@@ -53,8 +53,14 @@ def niveau_suivant(niveau_actuel, juste, hesitation):
     """Transition. Trois issues, pas deux."""
     if not juste:
         return max(NIVEAU_MIN_APRES_ECHEC, niveau_actuel - 1)
-    if hesitation:
+    if hesitation and niveau_actuel > MasteryState.Level.INCONNUE:
         # Juste mais lent : on ne monte pas. La carte revient demain.
+        #
+        # Sauf à la toute première rencontre : découvrir une lettre est
+        # nécessairement lent, et pénaliser cette lenteur-là bloquerait
+        # l'apprenant au niveau 0 indéfiniment. Le seuil mesure
+        # l'automatisation, une notion qui n'a de sens que sur ce qu'on
+        # connaît déjà.
         return niveau_actuel
     return min(NIVEAU_MAX, niveau_actuel + 1)
 

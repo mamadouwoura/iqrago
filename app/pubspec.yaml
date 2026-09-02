@@ -1,0 +1,29 @@
+name: iqrago
+description: Coach personnel intelligent pour apprendre à lire l'arabe.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.7.0
+  flutter_secure_storage: ^9.2.0
+  uuid: ^4.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    # Décidée à l'étape 1 : seule police sur 720 mesures à atteindre 0,00 px
+    # de débordement des harakat. Voir docs/07-rendu-arabe.md.
+    - family: NotoNaskhArabic
+      fonts:
+        - asset: fonts/NotoNaskhArabic-Regular.ttf

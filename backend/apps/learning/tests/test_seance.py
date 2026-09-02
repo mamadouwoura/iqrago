@@ -256,13 +256,35 @@ def test_lot_rejoue_nest_ecrit_quune_fois(socle, apprenant):
 
 @pytest.mark.django_db
 def test_hesitation_detectee_par_le_serveur(socle, apprenant):
+    """Sur une compétence déjà découverte, une réponse juste mais lente ne
+    fait pas monter le niveau.
+
+    Le test part du niveau 1 et non de zéro : à la toute première rencontre
+    la lenteur est normale et ne pénalise pas — sans quoi l'apprenant
+    resterait bloqué au niveau 0, puisqu'il ne peut pas répondre vite à ce
+    qu'il découvre.
+    """
+    _maitriser(apprenant, ["letter.dal.recognize"], N.DECOUVERTE)
     seuil = Skill.objects.get(id="letter.dal.recognize").latency_threshold_ms
     services.synchroniser(
         apprenant, day_number=1,
         attempts=[_tentative("letter.dal.recognize", latence=seuil + 1000)],
     )
     a = ExerciseAttempt.objects.get()
-    assert a.is_hesitation and a.level_before == a.level_after
+    assert a.is_hesitation
+    assert a.level_before == a.level_after == N.DECOUVERTE
+
+
+@pytest.mark.django_db
+def test_premiere_rencontre_lente_progresse_quand_meme(socle, apprenant):
+    """Le défaut trouvé en jouant une vraie séance dans l'application."""
+    seuil = Skill.objects.get(id="letter.dal.recognize").latency_threshold_ms
+    services.synchroniser(
+        apprenant, day_number=1,
+        attempts=[_tentative("letter.dal.recognize", latence=seuil * 6)],
+    )
+    m = MasteryState.objects.get(user=apprenant, skill_id="letter.dal.recognize")
+    assert m.level == N.DECOUVERTE, "dix secondes à la découverte ne doivent pas bloquer"
 
 
 @pytest.mark.django_db
