@@ -36,6 +36,37 @@ const marquesStructurelles = {'madd.alif', 'madd.waw', 'madd.ya', 'article'};
 
 bool estLettreArabe(int c) => c >= 0x0621 && c <= 0x064A && !diacritiques.containsKey(c);
 
+/// Position d'une lettre dans un mot, d'après la liaison à gauche.
+///
+/// Toutes les lettres acceptent une liaison venant de la droite ; six
+/// (ا د ذ ر ز و) ne se lient jamais à la suivante.
+String positionDans(List<String> cs, int i, Map<String, bool> attache) {
+  final avant = i > 0 && (attache[cs[i - 1]] ?? false);
+  final apres = i < cs.length - 1 && (attache[cs[i]] ?? false);
+  if (!avant && !apres) return 'isolee';
+  if (!avant) return 'initial';
+  return apres ? 'medial' : 'final';
+}
+
+/// Le premier jour où un mot du corpus montre cette lettre à cette position,
+/// ou `null` si aucun ne le fait.
+int? premierJourAvec(String car, String pos, List<Map<String, dynamic>> mots) {
+  int? plusTot;
+  for (final m in mots) {
+    final cs = (m['lettres'] as List).cast<String>();
+    for (var i = 0; i < cs.length; i++) {
+      if (cs[i] == car && positionDans(cs, i, _attache) == pos) {
+        final j = m['jour'] as int;
+        if (plusTot == null || j < plusTot) plusTot = j;
+      }
+    }
+  }
+  return plusTot;
+}
+
+/// caractère -> se lie-t-il à la lettre suivante ?
+final _attache = <String, bool>{};
+
 /// Sépare une chaîne vocalisée en (lettres, signes rencontrés).
 ({List<String> lettres, Set<String> signes}) decomposer(String mot) {
   final lettres = <String>[];
@@ -223,6 +254,10 @@ int generer(Map<String, dynamic> l, Map<String, dynamic> m) {
   final mots = (m['mots'] as List).cast<Map<String, dynamic>>();
 
   final idDeLettre = {for (final x in lettres) x['lettre'] as String: x['id'] as String};
+  _attache
+    ..clear()
+    ..addEntries(lettres.map((x) =>
+        MapEntry(x['lettre'] as String, x['attache_suivante'] == true)));
   final competences = <Map<String, dynamic>>[];
 
   void ajouter(String id, String type, int jour, List<String> prereq,
@@ -246,8 +281,15 @@ int generer(Map<String, dynamic> l, Map<String, dynamic> m) {
     ajouter('letter.$id.sound', 'letter.sound', jour, ['letter.$id.recognize'], arabe: car);
     if (x['attache_suivante'] == true) {
       for (final pos in ['initial', 'medial', 'final']) {
-        ajouter('letter.$id.form.$pos', 'letter.form', jour, ['letter.$id.recognize'],
-            arabe: car);
+        // Une forme positionnelle ne s'enseigne pas avant qu'un mot puisse la
+        // montrer : « touche le ت au milieu » n'a pas de sens s'il n'existe
+        // aucun mot lisible qui le contienne. Le jour est donc calculé, non
+        // recopié de la lettre — et il avance tout seul quand le corpus
+        // s'enrichit.
+        final support = premierJourAvec(car, pos, mots);
+        final jourForme = support == null || support < jour ? jour : support;
+        ajouter('letter.$id.form.$pos', 'letter.form', jourForme,
+            ['letter.$id.recognize'], arabe: car);
       }
     }
   }

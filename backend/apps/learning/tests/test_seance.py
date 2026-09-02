@@ -286,7 +286,8 @@ def test_api_synchro_puis_apercu(socle, api):
     apercu = api.get("/api/v1/progress/overview")
     assert apercu.data["skills_started"] == 1
     assert apercu.data["accuracy_pct"] == 100
-    assert apercu.data["skills_total"] == 283
+    assert apercu.data["skills_total"] == Skill.objects.filter(
+        course_id='course.1').count()
 
 
 @pytest.mark.django_db

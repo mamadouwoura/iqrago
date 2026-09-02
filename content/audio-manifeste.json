@@ -1,7 +1,7 @@
 {
   "_": "GÉNÉRÉ. Feuille de route de la journée de studio. Voix humaine native, débit lent et articulé. Jamais de synthèse vocale : l'apprenant imite ce qu'il entend, une référence approximative enseigne une erreur.",
   "format": "Opus 24 kbps mono, ~4 Ko/s",
-  "total": 158,
+  "total": 209,
   "audios": [
     {
       "fichier": "lettre_dal.opus",
@@ -676,17 +676,17 @@
       "categorie": "syllabe"
     },
     {
-      "fichier": "mot_warad.opus",
-      "arabe": "وَرَد",
-      "a_dire": "warad",
-      "sens": "des roses",
-      "categorie": "mot"
-    },
-    {
       "fichier": "mot_dâr.opus",
       "arabe": "دَار",
       "a_dire": "dâr",
       "sens": "la maison",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_warad.opus",
+      "arabe": "وَرَد",
+      "a_dire": "warad",
+      "sens": "des roses",
       "categorie": "mot"
     },
     {
@@ -711,6 +711,20 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_barad.opus",
+      "arabe": "بَرَد",
+      "a_dire": "barad",
+      "sens": "la grêle",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_batara.opus",
+      "arabe": "بَتَرَ",
+      "a_dire": "batara",
+      "sens": "il a coupé",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_bâb.opus",
       "arabe": "بَاب",
       "a_dire": "bâb",
@@ -718,10 +732,10 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_barad.opus",
-      "arabe": "بَرَد",
-      "a_dire": "barad",
-      "sens": "la grêle",
+      "fichier": "mot_thabata.opus",
+      "arabe": "ثَبَتَ",
+      "a_dire": "thabata",
+      "sens": "il s'est affermi",
       "categorie": "mot"
     },
     {
@@ -732,6 +746,20 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_tâba.opus",
+      "arabe": "تَابَ",
+      "a_dire": "tâba",
+      "sens": "il s'est repenti",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_bahatha.opus",
+      "arabe": "بَحَثَ",
+      "a_dire": "bahatha",
+      "sens": "il a cherché",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_hajar.opus",
       "arabe": "حَجَر",
       "a_dire": "hajar",
@@ -739,10 +767,10 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_kharaja.opus",
-      "arabe": "خَرَجَ",
-      "a_dire": "kharaja",
-      "sens": "il est sorti",
+      "fichier": "mot_hajaza.opus",
+      "arabe": "حَجَزَ",
+      "a_dire": "hajaza",
+      "sens": "il a réservé",
       "categorie": "mot"
     },
     {
@@ -753,6 +781,27 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_jabara.opus",
+      "arabe": "جَبَرَ",
+      "a_dire": "jabara",
+      "sens": "il a réparé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_khabar.opus",
+      "arabe": "خَبَر",
+      "a_dire": "khabar",
+      "sens": "une nouvelle",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kharaja.opus",
+      "arabe": "خَرَجَ",
+      "a_dire": "kharaja",
+      "sens": "il est sorti",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_darasa.opus",
       "arabe": "دَرَسَ",
       "a_dire": "darasa",
@@ -760,10 +809,31 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_shajar.opus",
-      "arabe": "شَجَر",
-      "a_dire": "shajar",
-      "sens": "des arbres",
+      "fichier": "mot_habasa.opus",
+      "arabe": "حَبَسَ",
+      "a_dire": "habasa",
+      "sens": "il a retenu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hasaba.opus",
+      "arabe": "حَسَبَ",
+      "a_dire": "hasaba",
+      "sens": "il a compté",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_khashab.opus",
+      "arabe": "خَشَب",
+      "a_dire": "khashab",
+      "sens": "du bois",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_sahaba.opus",
+      "arabe": "سَحَبَ",
+      "a_dire": "sahaba",
+      "sens": "il a tiré",
       "categorie": "mot"
     },
     {
@@ -774,10 +844,66 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_shajar.opus",
+      "arabe": "شَجَر",
+      "a_dire": "shajar",
+      "sens": "des arbres",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_shariba.opus",
+      "arabe": "شَرِبَ",
+      "a_dire": "shariba",
+      "sens": "il a bu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_bakhila.opus",
+      "arabe": "بَخِلَ",
+      "a_dire": "bakhila",
+      "sens": "il a été avare",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_halama.opus",
+      "arabe": "حَلَمَ",
+      "a_dire": "halama",
+      "sens": "il a rêvé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hamala.opus",
+      "arabe": "حَمَلَ",
+      "a_dire": "hamala",
+      "sens": "il a porté",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_jamal.opus",
       "arabe": "جَمَل",
       "a_dire": "jamal",
       "sens": "un chameau",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_lamasa.opus",
+      "arabe": "لَمَسَ",
+      "a_dire": "lamasa",
+      "sens": "il a touché",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_masaha.opus",
+      "arabe": "مَسَحَ",
+      "a_dire": "masaha",
+      "sens": "il a essuyé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_mathal.opus",
+      "arabe": "مَثَل",
+      "a_dire": "mathal",
+      "sens": "un exemple",
       "categorie": "mot"
     },
     {
@@ -788,17 +914,24 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_salaba.opus",
+      "arabe": "سَلَبَ",
+      "a_dire": "salaba",
+      "sens": "il a dérobé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_salakha.opus",
+      "arabe": "سَلَخَ",
+      "a_dire": "salakha",
+      "sens": "il a dépouillé",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_salâm.opus",
       "arabe": "سَلَام",
       "a_dire": "salâm",
       "sens": "la paix",
-      "categorie": "mot"
-    },
-    {
-      "fichier": "mot_nâr.opus",
-      "arabe": "نَار",
-      "a_dire": "nâr",
-      "sens": "le feu",
       "categorie": "mot"
     },
     {
@@ -809,6 +942,62 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_bayân.opus",
+      "arabe": "بَيَان",
+      "a_dire": "bayân",
+      "sens": "un exposé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hazina.opus",
+      "arabe": "حَزِنَ",
+      "a_dire": "hazina",
+      "sens": "il s'est attristé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_manaha.opus",
+      "arabe": "مَنَحَ",
+      "a_dire": "manaha",
+      "sens": "il a accordé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nabasha.opus",
+      "arabe": "نَبَشَ",
+      "a_dire": "nabasha",
+      "sens": "il a fouillé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nashara.opus",
+      "arabe": "نَشَرَ",
+      "a_dire": "nashara",
+      "sens": "il a répandu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nataja.opus",
+      "arabe": "نَتَجَ",
+      "a_dire": "nataja",
+      "sens": "il a résulté",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nâr.opus",
+      "arabe": "نَار",
+      "a_dire": "nâr",
+      "sens": "le feu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_samina.opus",
+      "arabe": "سَمِنَ",
+      "a_dire": "samina",
+      "sens": "il a grossi",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_yad.opus",
       "arabe": "يَد",
       "a_dire": "yad",
@@ -816,10 +1005,10 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_kataba.opus",
-      "arabe": "كَتَبَ",
-      "a_dire": "kataba",
-      "sens": "il a écrit",
+      "fichier": "mot_yasara.opus",
+      "arabe": "يَسَرَ",
+      "a_dire": "yasara",
+      "sens": "il a facilité",
       "categorie": "mot"
     },
     {
@@ -830,10 +1019,17 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_nahar.opus",
-      "arabe": "نَهَر",
-      "a_dire": "nahar",
-      "sens": "un fleuve",
+      "fichier": "mot_haraba.opus",
+      "arabe": "هَرَبَ",
+      "a_dire": "haraba",
+      "sens": "il s'est enfui",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kataba.opus",
+      "arabe": "كَتَبَ",
+      "a_dire": "kataba",
+      "sens": "il a écrit",
       "categorie": "mot"
     },
     {
@@ -844,10 +1040,66 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_malaka.opus",
+      "arabe": "مَلَكَ",
+      "a_dire": "malaka",
+      "sens": "il a possédé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nabîh.opus",
+      "arabe": "نَبِيه",
+      "a_dire": "nabîh",
+      "sens": "perspicace",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nahaja.opus",
+      "arabe": "نَهَجَ",
+      "a_dire": "nahaja",
+      "sens": "il a suivi une voie",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nahar.opus",
+      "arabe": "نَهَر",
+      "a_dire": "nahar",
+      "sens": "un fleuve",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_sakana.opus",
+      "arabe": "سَكَنَ",
+      "a_dire": "sakana",
+      "sens": "il a habité",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_'amal.opus",
       "arabe": "عَمَل",
       "a_dire": "'amal",
       "sens": "un travail",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_balagha.opus",
+      "arabe": "بَلَغَ",
+      "a_dire": "balagha",
+      "sens": "il a atteint",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_ghurâb.opus",
+      "arabe": "غُرَاب",
+      "a_dire": "ghurâb",
+      "sens": "un corbeau",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_ja'ala.opus",
+      "arabe": "جَعَلَ",
+      "a_dire": "ja'ala",
+      "sens": "il a fait",
       "categorie": "mot"
     },
     {
@@ -858,10 +1110,45 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_ghurâb.opus",
-      "arabe": "غُرَاب",
-      "a_dire": "ghurâb",
-      "sens": "un corbeau",
+      "fichier": "mot_shaghala.opus",
+      "arabe": "شَغَلَ",
+      "a_dire": "shaghala",
+      "sens": "il a occupé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_'aqala.opus",
+      "arabe": "عَقَلَ",
+      "a_dire": "'aqala",
+      "sens": "il a compris",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_fataha.opus",
+      "arabe": "فَتَحَ",
+      "a_dire": "fataha",
+      "sens": "il a ouvert",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_fî.opus",
+      "arabe": "فِي",
+      "a_dire": "fî",
+      "sens": "dans",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_halafa.opus",
+      "arabe": "حَلَفَ",
+      "a_dire": "halafa",
+      "sens": "il a juré",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nafa'a.opus",
+      "arabe": "نَفَعَ",
+      "a_dire": "nafa'a",
+      "sens": "il a été utile",
       "categorie": "mot"
     },
     {
@@ -879,10 +1166,45 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_fataha.opus",
-      "arabe": "فَتَحَ",
-      "a_dire": "fataha",
-      "sens": "il a ouvert",
+      "fichier": "mot_sabaqa.opus",
+      "arabe": "سَبَقَ",
+      "a_dire": "sabaqa",
+      "sens": "il a devancé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_daraba.opus",
+      "arabe": "ضَرَبَ",
+      "a_dire": "daraba",
+      "sens": "il a frappé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hadara.opus",
+      "arabe": "حَضَرَ",
+      "a_dire": "hadara",
+      "sens": "il est venu",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_khalasa.opus",
+      "arabe": "خَلَصَ",
+      "a_dire": "khalasa",
+      "sens": "il s'est libéré",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_naqada.opus",
+      "arabe": "نَقَضَ",
+      "a_dire": "naqada",
+      "sens": "il a défait",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nasara.opus",
+      "arabe": "نَصَرَ",
+      "a_dire": "nasara",
+      "sens": "il a secouru",
       "categorie": "mot"
     },
     {
@@ -893,10 +1215,10 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_daraba.opus",
-      "arabe": "ضَرَبَ",
-      "a_dire": "daraba",
-      "sens": "il a frappé",
+      "fichier": "mot_hafiza.opus",
+      "arabe": "حَفِظَ",
+      "a_dire": "hafiza",
+      "sens": "il a mémorisé",
       "categorie": "mot"
     },
     {
@@ -914,17 +1236,31 @@
       "categorie": "mot"
     },
     {
+      "fichier": "mot_saqata.opus",
+      "arabe": "سَقَطَ",
+      "a_dire": "saqata",
+      "sens": "il est tombé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_talaba.opus",
+      "arabe": "طَلَبَ",
+      "a_dire": "talaba",
+      "sens": "il a demandé",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_zahara.opus",
+      "arabe": "ظَهَرَ",
+      "a_dire": "zahara",
+      "sens": "il est apparu",
+      "categorie": "mot"
+    },
+    {
       "fichier": "mot_bayt.opus",
       "arabe": "بَيْت",
       "a_dire": "bayt",
       "sens": "une maison",
-      "categorie": "mot"
-    },
-    {
-      "fichier": "mot_ward.opus",
-      "arabe": "وَرْد",
-      "a_dire": "ward",
-      "sens": "des roses",
       "categorie": "mot"
     },
     {
@@ -935,10 +1271,17 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_nûr.opus",
-      "arabe": "نُور",
-      "a_dire": "nûr",
-      "sens": "la lumière",
+      "fichier": "mot_ward.opus",
+      "arabe": "وَرْد",
+      "a_dire": "ward",
+      "sens": "des roses",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_hisâb.opus",
+      "arabe": "حِسَاب",
+      "a_dire": "hisâb",
+      "sens": "un compte",
       "categorie": "mot"
     },
     {
@@ -946,6 +1289,20 @@
       "arabe": "كَبِير",
       "a_dire": "kabîr",
       "sens": "grand",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_nûr.opus",
+      "arabe": "نُور",
+      "a_dire": "nûr",
+      "sens": "la lumière",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_ta'âm.opus",
+      "arabe": "طَعَام",
+      "a_dire": "ta'âm",
+      "sens": "la nourriture",
       "categorie": "mot"
     },
     {
@@ -963,17 +1320,17 @@
       "categorie": "mot"
     },
     {
-      "fichier": "mot_kitâbun.opus",
-      "arabe": "كِتَابٌ",
-      "a_dire": "kitâbun",
-      "sens": "un livre",
-      "categorie": "mot"
-    },
-    {
       "fichier": "mot_baytan.opus",
       "arabe": "بَيْتًا",
       "a_dire": "baytan",
       "sens": "une maison",
+      "categorie": "mot"
+    },
+    {
+      "fichier": "mot_kitâbun.opus",
+      "arabe": "كِتَابٌ",
+      "a_dire": "kitâbun",
+      "sens": "un livre",
       "categorie": "mot"
     },
     {

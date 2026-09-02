@@ -115,26 +115,26 @@ def test_brouillon_jamais_servi(api_connectee, socle):
 
 
 @pytest.mark.django_db
-def test_graphe_des_competences(api_connectee, socle):
+def test_graphe_des_competences(api_connectee, socle, volumes):
     r = api_connectee.get("/api/v1/skills")
     assert r.status_code == 200
-    assert len(r.data) == 283
+    assert len(r.data) == volumes['nb_competences']
     syllabe = next(c for c in r.data if c["id"] == "syllable.dal.fatha")
     assert set(syllabe["prerequisites"]) == {"letter.dal.sound", "haraka.fatha"}
 
 
 @pytest.mark.django_db
-def test_competences_filtrables_par_jour(api_connectee, socle):
+def test_competences_filtrables_par_jour(api_connectee, socle, volumes):
     r = api_connectee.get("/api/v1/skills?jusqu_au_jour=3")
     assert all(c["introduced_on_day"] <= 3 for c in r.data)
-    assert len(r.data) < 283
+    assert len(r.data) < volumes['nb_competences']
 
 
 @pytest.mark.django_db
-def test_manifeste_des_medias(api_connectee, socle):
+def test_manifeste_des_medias(api_connectee, socle, volumes):
     r = api_connectee.get("/api/v1/media/manifest")
     assert r.status_code == 200
-    assert len(r.data) == 158
+    assert len(r.data) == volumes['nb_medias']
     assert all(m["bundled"] for m in r.data)
 
 

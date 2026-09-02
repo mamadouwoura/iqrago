@@ -77,7 +77,7 @@ def test_un_seul_jour_par_parcours(parcours):
 
 
 @pytest.mark.django_db
-def test_import_du_socle_est_idempotent():
+def test_import_du_socle_est_idempotent(volumes):
     """Réimporter ne doit pas dupliquer : c'est ce qui permet de retravailler
     les fichiers source sans repartir d'une base vide."""
     call_command("importer_contenu", verbosity=0)
@@ -88,7 +88,9 @@ def test_import_du_socle_est_idempotent():
         Skill.objects.count(), SkillPrerequisite.objects.count(), Lesson.objects.count()
     ) == compte
 
-    assert compte[0] == 283, "les 283 compétences générées doivent être en base"
+    assert compte[0] == volumes['nb_competences'], (
+        "la base doit refléter content/competences.json"
+    )
     assert Lesson.objects.filter(is_free=True).count() == 3, "jours 1 à 3 gratuits"
 
 
@@ -142,4 +144,4 @@ def test_page_admin_catalogue_repond(admin_client, url):
 def test_admin_liste_les_competences_importees(admin_client):
     call_command("importer_contenu", verbosity=0)
     body = admin_client.get("/admin/catalog/skill/").content.decode()
-    assert "letter.ba.sound" in body or "283" in body
+    assert "letter.ba.sound" in body

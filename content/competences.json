@@ -1,7 +1,7 @@
 {
   "_": "GÉNÉRÉ par tools/contenu/contenu.dart generer — ne pas éditer à la main.",
   "version": "1.0.0",
-  "total": 283,
+  "total": 334,
   "competences": [
     {
       "id": "fluency.level.1",
@@ -488,16 +488,6 @@
       ]
     },
     {
-      "id": "letter.ba.form.final",
-      "type": "letter.form",
-      "arabic": "ب",
-      "introduced_on_day": 8,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.ba.recognize"
-      ]
-    },
-    {
       "id": "letter.ba.form.initial",
       "type": "letter.form",
       "arabic": "ب",
@@ -584,27 +574,7 @@
       ]
     },
     {
-      "id": "letter.tha.form.final",
-      "type": "letter.form",
-      "arabic": "ث",
-      "introduced_on_day": 8,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.tha.recognize"
-      ]
-    },
-    {
       "id": "letter.tha.form.initial",
-      "type": "letter.form",
-      "arabic": "ث",
-      "introduced_on_day": 8,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.tha.recognize"
-      ]
-    },
-    {
-      "id": "letter.tha.form.medial",
       "type": "letter.form",
       "arabic": "ث",
       "introduced_on_day": 8,
@@ -744,6 +714,19 @@
       ]
     },
     {
+      "id": "word.batara",
+      "type": "word",
+      "arabic": "بَتَرَ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.ra.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
       "id": "word.bâb",
       "type": "word",
       "arabic": "بَاب",
@@ -753,6 +736,19 @@
         "haraka.fatha",
         "letter.alif.sound",
         "letter.ba.sound"
+      ]
+    },
+    {
+      "id": "word.thabata",
+      "type": "word",
+      "arabic": "ثَبَتَ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.ta.sound",
+        "letter.tha.sound"
       ]
     },
     {
@@ -771,6 +767,19 @@
       ]
     },
     {
+      "id": "word.tâba",
+      "type": "word",
+      "arabic": "تَابَ",
+      "introduced_on_day": 8,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
       "id": "contrast.jim_ha_kha",
       "type": "contrast",
       "arabic": null,
@@ -780,16 +789,6 @@
         "letter.jim.recognize",
         "letter.hha.recognize",
         "letter.kha.recognize"
-      ]
-    },
-    {
-      "id": "letter.hha.form.final",
-      "type": "letter.form",
-      "arabic": "ح",
-      "introduced_on_day": 9,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.hha.recognize"
       ]
     },
     {
@@ -831,16 +830,6 @@
       ]
     },
     {
-      "id": "letter.jim.form.final",
-      "type": "letter.form",
-      "arabic": "ج",
-      "introduced_on_day": 9,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.jim.recognize"
-      ]
-    },
-    {
       "id": "letter.jim.form.initial",
       "type": "letter.form",
       "arabic": "ج",
@@ -879,27 +868,7 @@
       ]
     },
     {
-      "id": "letter.kha.form.final",
-      "type": "letter.form",
-      "arabic": "خ",
-      "introduced_on_day": 9,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.kha.recognize"
-      ]
-    },
-    {
       "id": "letter.kha.form.initial",
-      "type": "letter.form",
-      "arabic": "خ",
-      "introduced_on_day": 9,
-      "latency_threshold_ms": 1500,
-      "prerequisites": [
-        "letter.kha.recognize"
-      ]
-    },
-    {
-      "id": "letter.kha.form.medial",
       "type": "letter.form",
       "arabic": "خ",
       "introduced_on_day": 9,
@@ -924,6 +893,16 @@
       "latency_threshold_ms": 1500,
       "prerequisites": [
         "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "letter.tha.form.final",
+      "type": "letter.form",
+      "arabic": "ث",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tha.recognize"
       ]
     },
     {
@@ -1026,6 +1005,19 @@
       ]
     },
     {
+      "id": "word.bahatha",
+      "type": "word",
+      "arabic": "بَحَثَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.hha.sound",
+        "letter.tha.sound"
+      ]
+    },
+    {
       "id": "word.hajar",
       "type": "word",
       "arabic": "حَجَر",
@@ -1039,6 +1031,19 @@
       ]
     },
     {
+      "id": "word.hajaza",
+      "type": "word",
+      "arabic": "حَجَزَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hha.sound",
+        "letter.jim.sound",
+        "letter.zay.sound"
+      ]
+    },
+    {
       "id": "word.hâr",
       "type": "word",
       "arabic": "حَار",
@@ -1048,6 +1053,32 @@
         "haraka.fatha",
         "letter.alif.sound",
         "letter.hha.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.jabara",
+      "type": "word",
+      "arabic": "جَبَرَ",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.jim.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.khabar",
+      "type": "word",
+      "arabic": "خَبَر",
+      "introduced_on_day": 9,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.kha.sound",
         "letter.ra.sound"
       ]
     },
@@ -1076,13 +1107,13 @@
       ]
     },
     {
-      "id": "letter.shin.form.final",
+      "id": "letter.ba.form.final",
       "type": "letter.form",
-      "arabic": "ش",
+      "arabic": "ب",
       "introduced_on_day": 10,
       "latency_threshold_ms": 1500,
       "prerequisites": [
-        "letter.shin.recognize"
+        "letter.ba.recognize"
       ]
     },
     {
@@ -1251,6 +1282,58 @@
       ]
     },
     {
+      "id": "word.habasa",
+      "type": "word",
+      "arabic": "حَبَسَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.hha.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.hasaba",
+      "type": "word",
+      "arabic": "حَسَبَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.hha.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.khashab",
+      "type": "word",
+      "arabic": "خَشَب",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.kha.sound",
+        "letter.shin.sound"
+      ]
+    },
+    {
+      "id": "word.sahaba",
+      "type": "word",
+      "arabic": "سَحَبَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.hha.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
       "id": "word.sahâb",
       "type": "word",
       "arabic": "سَحَاب",
@@ -1275,6 +1358,50 @@
         "letter.jim.sound",
         "letter.ra.sound",
         "letter.shin.sound"
+      ]
+    },
+    {
+      "id": "word.shariba",
+      "type": "word",
+      "arabic": "شَرِبَ",
+      "introduced_on_day": 10,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.ba.sound",
+        "letter.ra.sound",
+        "letter.shin.sound"
+      ]
+    },
+    {
+      "id": "letter.hha.form.final",
+      "type": "letter.form",
+      "arabic": "ح",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.hha.recognize"
+      ]
+    },
+    {
+      "id": "letter.kha.form.final",
+      "type": "letter.form",
+      "arabic": "خ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kha.recognize"
+      ]
+    },
+    {
+      "id": "letter.kha.form.medial",
+      "type": "letter.form",
+      "arabic": "خ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.kha.recognize"
       ]
     },
     {
@@ -1374,6 +1501,16 @@
       ]
     },
     {
+      "id": "letter.tha.form.medial",
+      "type": "letter.form",
+      "arabic": "ث",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.tha.recognize"
+      ]
+    },
+    {
       "id": "syllable.lam.damma",
       "type": "syllable",
       "arabic": "لُ",
@@ -1440,6 +1577,46 @@
       ]
     },
     {
+      "id": "word.bakhila",
+      "type": "word",
+      "arabic": "بَخِلَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.ba.sound",
+        "letter.kha.sound",
+        "letter.lam.sound"
+      ]
+    },
+    {
+      "id": "word.halama",
+      "type": "word",
+      "arabic": "حَلَمَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hha.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ]
+    },
+    {
+      "id": "word.hamala",
+      "type": "word",
+      "arabic": "حَمَلَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hha.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ]
+    },
+    {
       "id": "word.jamal",
       "type": "word",
       "arabic": "جَمَل",
@@ -1450,6 +1627,45 @@
         "letter.jim.sound",
         "letter.lam.sound",
         "letter.mim.sound"
+      ]
+    },
+    {
+      "id": "word.lamasa",
+      "type": "word",
+      "arabic": "لَمَسَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.masaha",
+      "type": "word",
+      "arabic": "مَسَحَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hha.sound",
+        "letter.mim.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.mathal",
+      "type": "word",
+      "arabic": "مَثَل",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.lam.sound",
+        "letter.mim.sound",
+        "letter.tha.sound"
       ]
     },
     {
@@ -1466,6 +1682,32 @@
       ]
     },
     {
+      "id": "word.salaba",
+      "type": "word",
+      "arabic": "سَلَبَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.lam.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.salakha",
+      "type": "word",
+      "arabic": "سَلَخَ",
+      "introduced_on_day": 11,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.kha.sound",
+        "letter.lam.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
       "id": "word.salâm",
       "type": "word",
       "arabic": "سَلَام",
@@ -1477,6 +1719,16 @@
         "letter.lam.sound",
         "letter.mim.sound",
         "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "letter.jim.form.final",
+      "type": "letter.form",
+      "arabic": "ج",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.jim.recognize"
       ]
     },
     {
@@ -1528,13 +1780,13 @@
       ]
     },
     {
-      "id": "letter.ya.form.final",
+      "id": "letter.shin.form.final",
       "type": "letter.form",
-      "arabic": "ي",
+      "arabic": "ش",
       "introduced_on_day": 12,
       "latency_threshold_ms": 1500,
       "prerequisites": [
-        "letter.ya.recognize"
+        "letter.shin.recognize"
       ]
     },
     {
@@ -1656,6 +1908,86 @@
       ]
     },
     {
+      "id": "word.bayân",
+      "type": "word",
+      "arabic": "بَيَان",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.nun.sound",
+        "letter.ya.sound"
+      ]
+    },
+    {
+      "id": "word.hazina",
+      "type": "word",
+      "arabic": "حَزِنَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.hha.sound",
+        "letter.nun.sound",
+        "letter.zay.sound"
+      ]
+    },
+    {
+      "id": "word.manaha",
+      "type": "word",
+      "arabic": "مَنَحَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hha.sound",
+        "letter.mim.sound",
+        "letter.nun.sound"
+      ]
+    },
+    {
+      "id": "word.nabasha",
+      "type": "word",
+      "arabic": "نَبَشَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.nun.sound",
+        "letter.shin.sound"
+      ]
+    },
+    {
+      "id": "word.nashara",
+      "type": "word",
+      "arabic": "نَشَرَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.nun.sound",
+        "letter.ra.sound",
+        "letter.shin.sound"
+      ]
+    },
+    {
+      "id": "word.nataja",
+      "type": "word",
+      "arabic": "نَتَجَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.jim.sound",
+        "letter.nun.sound",
+        "letter.ta.sound"
+      ]
+    },
+    {
       "id": "word.nâr",
       "type": "word",
       "arabic": "نَار",
@@ -1669,6 +2001,20 @@
       ]
     },
     {
+      "id": "word.samina",
+      "type": "word",
+      "arabic": "سَمِنَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.mim.sound",
+        "letter.nun.sound",
+        "letter.sin.sound"
+      ]
+    },
+    {
       "id": "word.yad",
       "type": "word",
       "arabic": "يَد",
@@ -1677,6 +2023,19 @@
       "prerequisites": [
         "haraka.fatha",
         "letter.dal.sound",
+        "letter.ya.sound"
+      ]
+    },
+    {
+      "id": "word.yasara",
+      "type": "word",
+      "arabic": "يَسَرَ",
+      "introduced_on_day": 12,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ra.sound",
+        "letter.sin.sound",
         "letter.ya.sound"
       ]
     },
@@ -1856,6 +2215,19 @@
       ]
     },
     {
+      "id": "word.haraba",
+      "type": "word",
+      "arabic": "هَرَبَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.hah.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
       "id": "word.kataba",
       "type": "word",
       "arabic": "كَتَبَ",
@@ -1884,6 +2256,47 @@
       ]
     },
     {
+      "id": "word.malaka",
+      "type": "word",
+      "arabic": "مَلَكَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.kaf.sound",
+        "letter.lam.sound",
+        "letter.mim.sound"
+      ]
+    },
+    {
+      "id": "word.nabîh",
+      "type": "word",
+      "arabic": "نَبِيه",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.ba.sound",
+        "letter.hah.sound",
+        "letter.nun.sound",
+        "letter.ya.sound"
+      ]
+    },
+    {
+      "id": "word.nahaja",
+      "type": "word",
+      "arabic": "نَهَجَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hah.sound",
+        "letter.jim.sound",
+        "letter.nun.sound"
+      ]
+    },
+    {
       "id": "word.nahar",
       "type": "word",
       "arabic": "نَهَر",
@@ -1894,6 +2307,19 @@
         "letter.hah.sound",
         "letter.nun.sound",
         "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.sakana",
+      "type": "word",
+      "arabic": "سَكَنَ",
+      "introduced_on_day": 13,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.kaf.sound",
+        "letter.nun.sound",
+        "letter.sin.sound"
       ]
     },
     {
@@ -2083,6 +2509,19 @@
       ]
     },
     {
+      "id": "word.balagha",
+      "type": "word",
+      "arabic": "بَلَغَ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.ghayn.sound",
+        "letter.lam.sound"
+      ]
+    },
+    {
       "id": "word.ghurâb",
       "type": "word",
       "arabic": "غُرَاب",
@@ -2098,6 +2537,19 @@
       ]
     },
     {
+      "id": "word.ja'ala",
+      "type": "word",
+      "arabic": "جَعَلَ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ayn.sound",
+        "letter.jim.sound",
+        "letter.lam.sound"
+      ]
+    },
+    {
       "id": "word.sami'a",
       "type": "word",
       "arabic": "سَمِعَ",
@@ -2109,6 +2561,19 @@
         "letter.ayn.sound",
         "letter.mim.sound",
         "letter.sin.sound"
+      ]
+    },
+    {
+      "id": "word.shaghala",
+      "type": "word",
+      "arabic": "شَغَلَ",
+      "introduced_on_day": 15,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ghayn.sound",
+        "letter.lam.sound",
+        "letter.shin.sound"
       ]
     },
     {
@@ -2219,6 +2684,16 @@
       ]
     },
     {
+      "id": "letter.ya.form.final",
+      "type": "letter.form",
+      "arabic": "ي",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 1500,
+      "prerequisites": [
+        "letter.ya.recognize"
+      ]
+    },
+    {
       "id": "syllable.fa.damma",
       "type": "syllable",
       "arabic": "فُ",
@@ -2285,6 +2760,19 @@
       ]
     },
     {
+      "id": "word.'aqala",
+      "type": "word",
+      "arabic": "عَقَلَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ayn.sound",
+        "letter.lam.sound",
+        "letter.qaf.sound"
+      ]
+    },
+    {
       "id": "word.fataha",
       "type": "word",
       "arabic": "فَتَحَ",
@@ -2295,6 +2783,44 @@
         "letter.fa.sound",
         "letter.hha.sound",
         "letter.ta.sound"
+      ]
+    },
+    {
+      "id": "word.fî",
+      "type": "word",
+      "arabic": "فِي",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.kasra",
+        "letter.fa.sound",
+        "letter.ya.sound"
+      ]
+    },
+    {
+      "id": "word.halafa",
+      "type": "word",
+      "arabic": "حَلَفَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.fa.sound",
+        "letter.hha.sound",
+        "letter.lam.sound"
+      ]
+    },
+    {
+      "id": "word.nafa'a",
+      "type": "word",
+      "arabic": "نَفَعَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ayn.sound",
+        "letter.fa.sound",
+        "letter.nun.sound"
       ]
     },
     {
@@ -2321,6 +2847,19 @@
         "letter.mim.sound",
         "letter.qaf.sound",
         "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.sabaqa",
+      "type": "word",
+      "arabic": "سَبَقَ",
+      "introduced_on_day": 16,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.qaf.sound",
+        "letter.sin.sound"
       ]
     },
     {
@@ -2510,6 +3049,58 @@
       ]
     },
     {
+      "id": "word.hadara",
+      "type": "word",
+      "arabic": "حَضَرَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dad.sound",
+        "letter.hha.sound",
+        "letter.ra.sound"
+      ]
+    },
+    {
+      "id": "word.khalasa",
+      "type": "word",
+      "arabic": "خَلَصَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.kha.sound",
+        "letter.lam.sound",
+        "letter.sad.sound"
+      ]
+    },
+    {
+      "id": "word.naqada",
+      "type": "word",
+      "arabic": "نَقَضَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.dad.sound",
+        "letter.nun.sound",
+        "letter.qaf.sound"
+      ]
+    },
+    {
+      "id": "word.nasara",
+      "type": "word",
+      "arabic": "نَصَرَ",
+      "introduced_on_day": 17,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.nun.sound",
+        "letter.ra.sound",
+        "letter.sad.sound"
+      ]
+    },
+    {
       "id": "word.sabara",
       "type": "word",
       "arabic": "صَبَرَ",
@@ -2696,6 +3287,20 @@
       ]
     },
     {
+      "id": "word.hafiza",
+      "type": "word",
+      "arabic": "حَفِظَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.fa.sound",
+        "letter.hha.sound",
+        "letter.zah.sound"
+      ]
+    },
+    {
       "id": "word.matar",
       "type": "word",
       "arabic": "مَطَر",
@@ -2717,6 +3322,45 @@
       "prerequisites": [
         "haraka.fatha",
         "letter.nun.sound",
+        "letter.ra.sound",
+        "letter.zah.sound"
+      ]
+    },
+    {
+      "id": "word.saqata",
+      "type": "word",
+      "arabic": "سَقَطَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.qaf.sound",
+        "letter.sin.sound",
+        "letter.tta.sound"
+      ]
+    },
+    {
+      "id": "word.talaba",
+      "type": "word",
+      "arabic": "طَلَبَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.ba.sound",
+        "letter.lam.sound",
+        "letter.tta.sound"
+      ]
+    },
+    {
+      "id": "word.zahara",
+      "type": "word",
+      "arabic": "ظَهَرَ",
+      "introduced_on_day": 18,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.hah.sound",
         "letter.ra.sound",
         "letter.zah.sound"
       ]
@@ -2796,6 +3440,22 @@
       "prerequisites": []
     },
     {
+      "id": "word.hisâb",
+      "type": "word",
+      "arabic": "حِسَاب",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "haraka.kasra",
+        "letter.alif.sound",
+        "letter.ba.sound",
+        "letter.hha.sound",
+        "letter.sin.sound",
+        "mark.madd.alif"
+      ]
+    },
+    {
       "id": "word.kabîr",
       "type": "word",
       "arabic": "كَبِير",
@@ -2823,6 +3483,21 @@
         "letter.ra.sound",
         "letter.waw.sound",
         "mark.madd.waw"
+      ]
+    },
+    {
+      "id": "word.ta'âm",
+      "type": "word",
+      "arabic": "طَعَام",
+      "introduced_on_day": 20,
+      "latency_threshold_ms": 3500,
+      "prerequisites": [
+        "haraka.fatha",
+        "letter.alif.sound",
+        "letter.ayn.sound",
+        "letter.mim.sound",
+        "letter.tta.sound",
+        "mark.madd.alif"
       ]
     },
     {

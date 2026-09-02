@@ -3,7 +3,7 @@
 Généré par `tools/contenu/exercices.dart`. **Ne pas éditer** —
 ajouter les mots à `content/mots.json`, puis regénérer.
 
-39 cases vides et 26 cases incomplètes, sur 10 jours.
+0 cases vides et 58 cases incomplètes, sur 10 jours.
 
 Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mot n'est recevable que s'il n'utilise rien d'autre.
 
@@ -15,14 +15,11 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ب** (b) | en fin de mot | 0 | 3 |
-| **ب** (b) | au milieu | 0 | 3 |
-| **ت** (t) | en fin de mot | 1 | 2 |
-| **ت** (t) | en début de mot | 0 | 3 |
-| **ت** (t) | au milieu | 0 | 3 |
-| **ث** (th) | en fin de mot | 0 | 3 |
-| **ث** (th) | en début de mot | 1 | 2 |
-| **ث** (th) | au milieu | 0 | 3 |
+| **ب** (b) | au milieu | 1 | 2 |
+| **ت** (t) | en fin de mot | 2 | 1 |
+| **ت** (t) | en début de mot | 1 | 2 |
+| **ت** (t) | au milieu | 1 | 2 |
+| **ث** (th) | en début de mot | 2 | 1 |
 
 ## Jour 9
 
@@ -32,15 +29,11 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ج** (j) | en fin de mot | 0 | 3 |
-| **ج** (j) | en début de mot | 0 | 3 |
-| **ج** (j) | au milieu | 1 | 2 |
-| **ح** (h) | en fin de mot | 0 | 3 |
-| **ح** (h) | en début de mot | 2 | 1 |
-| **ح** (h) | au milieu | 0 | 3 |
-| **خ** (kh) | en fin de mot | 0 | 3 |
-| **خ** (kh) | en début de mot | 1 | 2 |
-| **خ** (kh) | au milieu | 0 | 3 |
+| **ث** (th) | en fin de mot | 1 | 2 |
+| **ج** (j) | en début de mot | 1 | 2 |
+| **ج** (j) | au milieu | 2 | 1 |
+| **ح** (h) | au milieu | 1 | 2 |
+| **خ** (kh) | en début de mot | 2 | 1 |
 
 ## Jour 10
 
@@ -50,12 +43,11 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **س** (s) | en fin de mot | 0 | 3 |
-| **س** (s) | en début de mot | 1 | 2 |
-| **س** (s) | au milieu | 0 | 3 |
-| **ش** (sh) | en fin de mot | 0 | 3 |
-| **ش** (sh) | en début de mot | 1 | 2 |
-| **ش** (sh) | au milieu | 0 | 3 |
+| **س** (s) | en fin de mot | 1 | 2 |
+| **س** (s) | en début de mot | 2 | 1 |
+| **س** (s) | au milieu | 1 | 2 |
+| **ش** (sh) | en début de mot | 2 | 1 |
+| **ش** (sh) | au milieu | 1 | 2 |
 
 ## Jour 11
 
@@ -65,12 +57,12 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ل** (l) | en fin de mot | 1 | 2 |
-| **ل** (l) | en début de mot | 0 | 3 |
-| **ل** (l) | au milieu | 1 | 2 |
-| **م** (m) | en fin de mot | 0 | 3 |
-| **م** (m) | en début de mot | 1 | 2 |
-| **م** (m) | au milieu | 1 | 2 |
+| **ث** (th) | au milieu | 1 | 2 |
+| **ح** (h) | en fin de mot | 1 | 2 |
+| **خ** (kh) | en fin de mot | 1 | 2 |
+| **خ** (kh) | au milieu | 1 | 2 |
+| **ل** (l) | en début de mot | 1 | 2 |
+| **م** (m) | en fin de mot | 1 | 2 |
 
 ## Jour 12
 
@@ -80,12 +72,12 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ن** (n) | en fin de mot | 0 | 3 |
-| **ن** (n) | en début de mot | 1 | 2 |
-| **ن** (n) | au milieu | 1 | 2 |
-| **ي** (y) | en fin de mot | 0 | 3 |
-| **ي** (y) | en début de mot | 1 | 2 |
-| **ي** (y) | au milieu | 0 | 3 |
+| **ج** (j) | en fin de mot | 1 | 2 |
+| **ش** (sh) | en fin de mot | 1 | 2 |
+| **ن** (n) | en fin de mot | 1 | 2 |
+| **ن** (n) | au milieu | 2 | 1 |
+| **ي** (y) | en début de mot | 2 | 1 |
+| **ي** (y) | au milieu | 1 | 2 |
 
 ## Jour 13
 
@@ -95,12 +87,12 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ك** (k) | en fin de mot | 0 | 3 |
+| **ك** (k) | en fin de mot | 1 | 2 |
 | **ك** (k) | en début de mot | 2 | 1 |
-| **ك** (k) | au milieu | 0 | 3 |
-| **ه** (h) | en fin de mot | 0 | 3 |
-| **ه** (h) | en début de mot | 1 | 2 |
-| **ه** (h) | au milieu | 1 | 2 |
+| **ك** (k) | au milieu | 1 | 2 |
+| **ه** (h) | en fin de mot | 1 | 2 |
+| **ه** (h) | en début de mot | 2 | 1 |
+| **ه** (h) | au milieu | 2 | 1 |
 
 ## Jour 15
 
@@ -112,10 +104,10 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 |---|---|---:|---:|
 | **ع** ('a) | en fin de mot | 1 | 2 |
 | **ع** ('a) | en début de mot | 1 | 2 |
-| **ع** ('a) | au milieu | 0 | 3 |
-| **غ** (gh) | en fin de mot | 0 | 3 |
+| **ع** ('a) | au milieu | 1 | 2 |
+| **غ** (gh) | en fin de mot | 1 | 2 |
 | **غ** (gh) | en début de mot | 1 | 2 |
-| **غ** (gh) | au milieu | 0 | 3 |
+| **غ** (gh) | au milieu | 1 | 2 |
 
 ## Jour 16
 
@@ -125,12 +117,13 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ف** (f) | en fin de mot | 0 | 3 |
-| **ف** (f) | en début de mot | 1 | 2 |
-| **ف** (f) | au milieu | 0 | 3 |
-| **ق** (q) | en fin de mot | 0 | 3 |
+| **ف** (f) | en fin de mot | 1 | 2 |
+| **ف** (f) | en début de mot | 2 | 1 |
+| **ف** (f) | au milieu | 1 | 2 |
+| **ق** (q) | en fin de mot | 1 | 2 |
 | **ق** (q) | en début de mot | 2 | 1 |
-| **ق** (q) | au milieu | 0 | 3 |
+| **ق** (q) | au milieu | 1 | 2 |
+| **ي** (y) | en fin de mot | 1 | 2 |
 
 ## Jour 17
 
@@ -140,12 +133,12 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ص** (s.) | en fin de mot | 0 | 3 |
+| **ص** (s.) | en fin de mot | 1 | 2 |
 | **ص** (s.) | en début de mot | 1 | 2 |
-| **ص** (s.) | au milieu | 0 | 3 |
-| **ض** (d.) | en fin de mot | 0 | 3 |
+| **ص** (s.) | au milieu | 1 | 2 |
+| **ض** (d.) | en fin de mot | 1 | 2 |
 | **ض** (d.) | en début de mot | 1 | 2 |
-| **ض** (d.) | au milieu | 0 | 3 |
+| **ض** (d.) | au milieu | 1 | 2 |
 
 ## Jour 18
 
@@ -155,11 +148,11 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 
 | Il faut un mot avec | À la position | Déjà trouvés | Manquants |
 |---|---|---:|---:|
-| **ط** (t.) | en fin de mot | 0 | 3 |
-| **ط** (t.) | en début de mot | 0 | 3 |
+| **ط** (t.) | en fin de mot | 1 | 2 |
+| **ط** (t.) | en début de mot | 1 | 2 |
 | **ط** (t.) | au milieu | 1 | 2 |
-| **ظ** (z.) | en fin de mot | 0 | 3 |
-| **ظ** (z.) | en début de mot | 0 | 3 |
+| **ظ** (z.) | en fin de mot | 1 | 2 |
+| **ظ** (z.) | en début de mot | 1 | 2 |
 | **ظ** (z.) | au milieu | 1 | 2 |
 
 ---
@@ -175,7 +168,6 @@ Chaque section donne **l'alphabet et les signes disponibles ce jour-là**. Un mo
 | `fluency.level.5` | — | fluidité | — | suites composées à l'exécution, hors génération |
 | `fluency.level.6` | — | fluidité | — | suites composées à l'exécution, hors génération |
 | `fluency.level.7` | — | fluidité | — | suites composées à l'exécution, hors génération |
-| `mark.madd.alif` | ا | signe | jour 20 | aucun mot ne le porte |
 | `word.dâr` | دَار | sens | jour 3 | moins de 2 autres mots pour les distracteurs |
 | `word.warad` | وَرَد | sens | jour 3 | moins de 2 autres mots pour les distracteurs |
 
