@@ -33,3 +33,8 @@ desktop.ini
 # --- archives de travail
 *.zip
 .env.docker
+
+# Brouillons générés : reproductibles à l'identique par
+# `dart run tools/contenu/exercices.dart`. Ce qui fait foi une fois relu,
+# c'est la base — pas ces fichiers.
+content/exercices/jour-*.json
