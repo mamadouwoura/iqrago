@@ -12,7 +12,7 @@ permet d'ajuster le moteur sans publier une nouvelle version de l'application.
 from django.db.models import Q
 from django.utils import timezone
 
-from apps.catalog.models import Exercise, Lesson, Skill
+from apps.catalog.models import ContentVersion, Exercise, Lesson, Skill
 
 from .models import MasteryState
 
@@ -71,11 +71,20 @@ def _atomes_connus(skill, niveaux):
 
 
 def _exercices_pour(skills, exclure_ids=()):
-    """Un exercice publié par compétence, le plus facile d'abord."""
+    """Un exercice **publié** par compétence, le plus facile d'abord.
+
+    Le filtre sur l'état de la version est la moitié qui compte : sans lui, un
+    exercice en cours d'écriture atteint un apprenant. C'est précisément ce que
+    le cycle éditorial existe pour empêcher, et un exercice sans version n'a
+    jamais été relu du tout.
+    """
     if not skills:
         return {}
     qs = (
-        Exercise.objects.filter(skill_id__in=[s.id for s in skills])
+        Exercise.objects.filter(
+            skill_id__in=[s.id for s in skills],
+            content_version__state=ContentVersion.State.PUBLISHED,
+        )
         .exclude(id__in=exclure_ids)
         .select_related("skill")
         .order_by("skill_id", "difficulty")

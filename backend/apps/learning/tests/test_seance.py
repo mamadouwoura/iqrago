@@ -13,7 +13,7 @@ from django.core.management import call_command
 from django.utils import timezone
 from rest_framework.test import APIClient
 
-from apps.catalog.models import Exercise, Skill
+from apps.catalog.models import ContentVersion, Exercise, Skill
 from apps.learning import composition, services
 from apps.learning.models import ExerciseAttempt, MasteryState, SessionRun
 from apps.profiles.models import Profile
@@ -141,17 +141,74 @@ def test_seance_sans_exercice_reste_valide(socle, apprenant):
     assert all(i["exercise"] is None for i in items)
 
 
+def _exercice(skill, version):
+    return Exercise.objects.create(
+        skill=skill, type=Exercise.Type.FAMILY_ODD_ONE_OUT,
+        payload={"options": [{"arabic": "د", "correct": True}, {"arabic": "ذ"}]},
+        content_version=version,
+    )
+
+
+def _item_de(seance, skill_id):
+    return next(
+        i for b in seance["blocks"] for i in b["items"] if i["skill_id"] == skill_id
+    )
+
+
 @pytest.mark.django_db
-def test_exercice_rattache_quand_il_existe(socle, apprenant):
-    skill = Skill.objects.get(id="letter.dal.recognize")
-    Exercise.objects.create(
-        skill=skill, type=Exercise.Type.FAMILY_ODD_ONE_OUT, payload={"options": ["د", "ذ"]}
-    )
+def test_exercice_en_brouillon_nest_jamais_servi(socle, apprenant):
+    """Le pendant, pour les exercices, du test qui existait déjà pour les
+    leçons. Un contenu en cours d'écriture ne doit pas atteindre un
+    apprenant — c'est précisément ce que le cycle éditorial existe pour
+    empêcher, et le §47 l'exige."""
+    auteur = User.objects.create_user(email="auteur@example.com", password=MDP)
+    version = ContentVersion.objects.create(label="Jour 01 — brouillon", author=auteur)
+    _exercice(Skill.objects.get(id="letter.dal.recognize"), version)
+
     s = composition.composer(apprenant, jour=1, minutes=15)
-    item = next(
-        i for b in s["blocks"] for i in b["items"] if i["skill_id"] == "letter.dal.recognize"
+    assert _item_de(s, "letter.dal.recognize")["exercise"] is None, (
+        "un brouillon a fuité vers l'apprenant"
     )
-    assert item["exercise"]["type"] == "family_odd_one_out"
+
+
+@pytest.mark.django_db
+def test_exercice_sans_version_nest_jamais_servi(socle, apprenant):
+    """Un exercice sans version n'a jamais été relu du tout."""
+    _exercice(Skill.objects.get(id="letter.dal.recognize"), None)
+    s = composition.composer(apprenant, jour=1, minutes=15)
+    assert _item_de(s, "letter.dal.recognize")["exercise"] is None
+
+
+@pytest.mark.django_db
+def test_exercice_publie_est_servi(socle, apprenant):
+    auteur = User.objects.create_user(email="auteur@example.com", password=MDP)
+    relecteur = User.objects.create_user(email="relecteur@example.com", password=MDP)
+    version = ContentVersion.objects.create(label="Jour 01", author=auteur)
+    _exercice(Skill.objects.get(id="letter.dal.recognize"), version)
+
+    version.soumettre()
+    version.valider(par=relecteur)
+    version.publier()
+
+    s = composition.composer(apprenant, jour=1, minutes=15)
+    assert _item_de(s, "letter.dal.recognize")["exercise"]["type"] == "family_odd_one_out"
+
+
+@pytest.mark.django_db
+def test_depublier_retire_lexercice_de_la_seance(socle, apprenant):
+    """Dépublier doit retirer le contenu du service, pas seulement changer un
+    libellé dans l'admin."""
+    auteur = User.objects.create_user(email="auteur@example.com", password=MDP)
+    relecteur = User.objects.create_user(email="relecteur@example.com", password=MDP)
+    version = ContentVersion.objects.create(label="Jour 01", author=auteur)
+    _exercice(Skill.objects.get(id="letter.dal.recognize"), version)
+    version.soumettre()
+    version.valider(par=relecteur)
+    version.publier()
+    version.depublier()
+
+    s = composition.composer(apprenant, jour=1, minutes=15)
+    assert _item_de(s, "letter.dal.recognize")["exercise"] is None
 
 
 # ---------------------------------------------------------- synchronisation

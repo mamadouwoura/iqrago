@@ -81,6 +81,20 @@ Puis générer une clé et la reporter dans `SECRET_KEY` :
 
 Lit `content/*.json` et peuple parcours, modules, compétences, prérequis, leçons et médias. **Idempotent** : réexécutable sans doublon, ce qui permet de retravailler les fichiers source et de réimporter. `--dry-run` compte sans écrire.
 
+### 7. Import des exercices
+
+```bash
+dart run tools/contenu/exercices.dart
+```
+
+```bash
+.venv\Scripts\python.exe manage.py importer_exercices
+```
+
+Les brouillons ne sont pas versionnés — ils se regénèrent à l'identique. L'import crée **un lot par jour de parcours** : « Jour 08 — La famille ٮ » groupe la trentaine d'exercices du jour, se relit d'une traite et se publie d'un seul tenant.
+
+**L'import ne publie jamais rien.** Tout entre à l'état de brouillon ; la publication exige une relecture puis une validation par un tiers. Idempotent : l'identifiant de chaque exercice est dérivé de son contenu, et le générateur étant déterministe, réimporter n'écrit qu'une version.
+
 Les fichiers de `content/` sont la source de vérité jusqu'à ce que l'admin prenne le relais ; ensuite c'est la base qui fait foi, et la commande ne sert plus qu'à amorcer un environnement neuf.
 
 ---
