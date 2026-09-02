@@ -376,3 +376,43 @@ def test_api_refuse_un_client_id_repete_dans_le_lot(socle, api):
          "latency_ms": 800, "answered_at": timezone.now().isoformat()}
     r = api.post("/api/v1/session/sync", {"day_number": 1, "attempts": [t, t]}, format="json")
     assert r.status_code == 400
+
+
+# ------------------------------------------------------ préchargement (D2)
+
+
+@pytest.mark.django_db
+def test_api_precharge_un_jour_precis(socle, api):
+    """Le client range les jours suivants pendant que l'utilisateur joue
+    celui-ci : sans cela, la première soirée sans réseau l'arrête."""
+    r = api.get("/api/v1/session/today?jour=3")
+    assert r.status_code == 200, r.data
+    assert r.data["day_number"] == 3
+
+
+@pytest.mark.django_db
+def test_precharger_nouvre_aucun_droit(socle, api):
+    """Précharger n'est pas contourner le paywall : le contrôle d'accès
+    s'applique exactement de la même façon."""
+    r = api.get("/api/v1/session/today?jour=8")
+    assert r.status_code == 403
+    assert r.data["error"]["code"] == "entitlement_required"
+
+
+@pytest.mark.django_db
+def test_jour_hors_parcours_refuse(socle, api):
+    for jour in (0, 31, 999):
+        r = api.get(f"/api/v1/session/today?jour={jour}")
+        assert r.status_code in (400, 404), f"jour {jour} accepté"
+
+
+@pytest.mark.django_db
+def test_lot_hors_ligne_marque_sa_provenance(socle, apprenant):
+    """Une séance jouée hors ligne doit se distinguer d'une séance en ligne :
+    sans quoi on ne saura jamais quelle part des usages se fait sans réseau."""
+    services.synchroniser(
+        apprenant, day_number=1,
+        attempts=[_tentative("letter.dal.recognize")],
+        source=SessionRun.Source.OFFLINE_SYNC,
+    )
+    assert SessionRun.objects.get().source == SessionRun.Source.OFFLINE_SYNC

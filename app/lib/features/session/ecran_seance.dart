@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uuid/uuid.dart';
 
 import '../../core/api.dart';
+import '../../core/depot.dart';
 import '../../core/modeles.dart';
 import '../../shared/arabic_text.dart';
 
@@ -9,16 +10,25 @@ import '../../shared/arabic_text.dart';
 ///
 /// Elle arrive **déjà composée** par le serveur : révisions, nouveautés,
 /// lecture finale. Cet écran ne fait que jouer ce qu'on lui donne, mesurer le
-/// temps de réponse, et renvoyer les tentatives brutes.
+/// temps de réponse, et remettre les tentatives au dépôt.
 ///
 /// La latence est mesurée ici mais **jamais interprétée ici** : c'est le
 /// serveur qui décide si une réponse juste était une hésitation, en la
 /// comparant au seuil de la compétence. Un client modifié ne doit pas pouvoir
 /// s'attribuer une maîtrise.
+///
+/// Rien dans cet écran ne distingue « en ligne » de « hors ligne » : le dépôt
+/// sert une séance, point. Seul un bandeau le signale.
 class EcranSeance extends StatefulWidget {
-  const EcranSeance({super.key, required this.api, required this.onDeconnexion});
+  const EcranSeance({
+    super.key,
+    required this.api,
+    required this.depot,
+    required this.onDeconnexion,
+  });
 
   final Api api;
+  final Depot depot;
   final VoidCallback onDeconnexion;
 
   @override
@@ -29,7 +39,8 @@ class _EcranSeanceState extends State<EcranSeance> {
   static const _uuid = Uuid();
 
   Seance? _seance;
-  String? _erreur;
+  Provenance _provenance = Provenance.reseau;
+  int _enAttente = 0;
   bool _chargement = true;
 
   int _index = 0;
@@ -37,6 +48,7 @@ class _EcranSeanceState extends State<EcranSeance> {
   Option? _choisie;
   final _tentatives = <Map<String, dynamic>>[];
   Map<String, dynamic>? _bilan;
+  bool _synchronise = true;
 
   @override
   void initState() {
@@ -45,43 +57,20 @@ class _EcranSeanceState extends State<EcranSeance> {
   }
 
   Future<void> _charger() async {
+    setState(() => _chargement = true);
+    final r = await widget.depot.seanceDuJour();
+    if (!mounted) return;
     setState(() {
-      _chargement = true;
-      _erreur = null;
+      _seance = r.seance;
+      _provenance = r.provenance;
+      _enAttente = r.enAttente;
+      _chargement = false;
+      _index = 0;
+      _choisie = null;
+      _bilan = null;
+      _tentatives.clear();
+      _afficheA = DateTime.now();
     });
-    try {
-      final r = await widget.api.seanceDuJour();
-      if (!mounted) return;
-      if (r.statusCode == 403) {
-        setState(() {
-          _erreur = 'Cette leçon fait partie du programme complet.';
-          _chargement = false;
-        });
-        return;
-      }
-      if (r.statusCode == 401) {
-        widget.onDeconnexion();
-        return;
-      }
-      if (r.statusCode != 200) {
-        setState(() {
-          _erreur = 'Le serveur a répondu ${r.statusCode}.';
-          _chargement = false;
-        });
-        return;
-      }
-      setState(() {
-        _seance = Seance.depuisJson(r.data as Map<String, dynamic>);
-        _chargement = false;
-        _afficheA = DateTime.now();
-      });
-    } catch (_) {
-      if (!mounted) return;
-      setState(() {
-        _erreur = 'Serveur injoignable.';
-        _chargement = false;
-      });
-    }
   }
 
   void _repondre(Item item, Option option) {
@@ -108,32 +97,19 @@ class _EcranSeanceState extends State<EcranSeance> {
       });
       return;
     }
-    await _terminer();
-  }
 
-  Future<void> _terminer() async {
     setState(() => _chargement = true);
-    try {
-      final r = await widget.api.synchroniser({
-        'day_number': _seance!.jour,
-        'attempts': _tentatives,
-        'completed_at': DateTime.now().toUtc().toIso8601String(),
-      });
-      if (!mounted) return;
-      setState(() {
-        _bilan = r.statusCode == 200 ? r.data as Map<String, dynamic> : null;
-        _erreur = r.statusCode == 200 ? null : 'La synchronisation a échoué.';
-        _chargement = false;
-      });
-    } catch (_) {
-      if (!mounted) return;
-      // Les tentatives restent en mémoire : rien n'est perdu, la
-      // synchronisation est idempotente et pourra être rejouée.
-      setState(() {
-        _erreur = 'Séance terminée, mais pas encore synchronisée.';
-        _chargement = false;
-      });
-    }
+    // Le dépôt empile avant d'essayer d'envoyer : le travail est sauvé même
+    // si le réseau manque, même si l'application meurt maintenant.
+    final parti = await widget.depot.terminer(_seance!.jour, _tentatives);
+    final restant = await widget.depot.stockage.nbTentativesEnAttente();
+    if (!mounted) return;
+    setState(() {
+      _bilan = {'justes': _tentatives.where((t) => t['is_correct'] == true).length};
+      _synchronise = parti;
+      _enAttente = restant;
+      _chargement = false;
+    });
   }
 
   @override
@@ -154,16 +130,22 @@ class _EcranSeanceState extends State<EcranSeance> {
           ),
         ],
       ),
-      body: _corps(),
+      body: Column(
+        children: [
+          if (_provenance == Provenance.cache) const _BandeauHorsLigne(),
+          if (_enAttente > 0) _BandeauEnAttente(n: _enAttente),
+          Expanded(child: _corps()),
+        ],
+      ),
     );
   }
 
   Widget _corps() {
     if (_chargement) return const Center(child: CircularProgressIndicator());
     if (_bilan != null) return _ecranBilan();
-    if (_erreur != null) return _ecranErreur();
+    if (_seance == null) return _ecranRien();
 
-    final items = _seance?.jouables ?? const <Item>[];
+    final items = _seance!.jouables;
     if (items.isEmpty) return _ecranRienAJouer();
     return _ecranItem(items);
   }
@@ -243,80 +225,107 @@ class _EcranSeanceState extends State<EcranSeance> {
     );
   }
 
-  Widget _ecranBilan() {
-    final justes = _tentatives.where((t) => t['is_correct'] == true).length;
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(24),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const Icon(Icons.check_circle_outline, size: 64),
-            const SizedBox(height: 16),
-            Text('Séance terminée',
-                style: Theme.of(context).textTheme.headlineSmall),
-            const SizedBox(height: 24),
-            Text('$justes bonne(s) réponse(s) sur ${_tentatives.length}'),
-            const SizedBox(height: 8),
-            Text('Série : ${_bilan!['streak_days']} jour(s)'),
-            const SizedBox(height: 8),
-            Text('${_bilan!['accepted']} tentative(s) enregistrée(s)'),
-            const SizedBox(height: 32),
-            OutlinedButton(
-              onPressed: () {
-                setState(() {
-                  _bilan = null;
-                  _index = 0;
-                  _choisie = null;
-                  _tentatives.clear();
-                });
-                _charger();
-              },
-              child: const Text('Revenir à la séance'),
-            ),
-          ],
+  Widget _ecranBilan() => Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.check_circle_outline, size: 64),
+              const SizedBox(height: 16),
+              Text('Séance terminée',
+                  style: Theme.of(context).textTheme.headlineSmall),
+              const SizedBox(height: 24),
+              Text('${_bilan!['justes']} bonne(s) réponse(s) '
+                  'sur ${_tentatives.length}'),
+              const SizedBox(height: 16),
+              // Le message dit ce qui est vrai : le travail est gardé, il
+              // partira. Pas « échec de synchronisation », qui laisse croire
+              // que la séance est perdue.
+              Text(
+                _synchronise
+                    ? 'Progression enregistrée.'
+                    : 'Gardée sur ton téléphone. Elle partira à la prochaine '
+                        'connexion.',
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              const SizedBox(height: 32),
+              OutlinedButton(onPressed: _charger, child: const Text('Continuer')),
+            ],
+          ),
         ),
-      ),
-    );
-  }
+      );
 
-  Widget _ecranRienAJouer() => Center(
+  Widget _ecranRienAJouer() => _message(
+        Icons.hourglass_empty,
+        'Rien à jouer aujourd\'hui',
+        'La séance est composée, mais aucun de ses exercices n\'est encore '
+            'publié. Un contenu en cours de relecture n\'est jamais servi.',
+      );
+
+  Widget _ecranRien() => _message(
+        Icons.cloud_off,
+        'Rien à jouer pour l\'instant',
+        'Aucune séance n\'a encore été téléchargée sur ce téléphone. '
+            'Connecte-toi une fois, et les jours suivants seront disponibles '
+            'même sans réseau.',
+      );
+
+  Widget _message(IconData icone, String titre, String texte) => Center(
         child: Padding(
           padding: const EdgeInsets.all(32),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.hourglass_empty, size: 48),
+              Icon(icone, size: 48),
               const SizedBox(height: 16),
-              Text('Rien à jouer aujourd\'hui',
-                  style: Theme.of(context).textTheme.titleLarge),
+              Text(titre, style: Theme.of(context).textTheme.titleLarge),
               const SizedBox(height: 12),
-              const Text(
-                'La séance est composée, mais aucun de ses exercices n\'est '
-                'encore publié. Un contenu en cours de relecture n\'est jamais '
-                'servi.',
-                textAlign: TextAlign.center,
-              ),
+              Text(texte, textAlign: TextAlign.center),
               const SizedBox(height: 24),
               OutlinedButton(onPressed: _charger, child: const Text('Réessayer')),
             ],
           ),
         ),
       );
+}
 
-  Widget _ecranErreur() => Center(
-        child: Padding(
-          padding: const EdgeInsets.all(32),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              const Icon(Icons.error_outline, size: 48),
-              const SizedBox(height: 16),
-              Text(_erreur!, textAlign: TextAlign.center),
-              const SizedBox(height: 24),
-              OutlinedButton(onPressed: _charger, child: const Text('Réessayer')),
-            ],
-          ),
+class _BandeauHorsLigne extends StatelessWidget {
+  const _BandeauHorsLigne();
+
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        color: Theme.of(context).colorScheme.secondaryContainer,
+        padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.cloud_off, size: 18),
+            const SizedBox(width: 8),
+            // Ce que l'utilisateur doit comprendre : il peut continuer.
+            // « Pas de connexion » seul suggère qu'il faut attendre.
+            Flexible(child: Text('Hors ligne — tu peux continuer',
+                style: Theme.of(context).textTheme.bodySmall)),
+          ],
+        ),
+      );
+}
+
+class _BandeauEnAttente extends StatelessWidget {
+  const _BandeauEnAttente({required this.n});
+  final int n;
+
+  @override
+  Widget build(BuildContext context) => Container(
+        width: double.infinity,
+        color: Theme.of(context).colorScheme.surfaceContainerHighest,
+        padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 16),
+        child: Text(
+          '$n réponse(s) à envoyer — rien n\'est perdu',
+          textAlign: TextAlign.center,
+          style: Theme.of(context).textTheme.bodySmall,
         ),
       );
 }

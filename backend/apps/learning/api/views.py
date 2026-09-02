@@ -34,7 +34,19 @@ class SeanceDuJourView(APIView):
                 status=status.HTTP_404_NOT_FOUND,
             )
 
-        jour = max(1, profil.current_day or 1)
+        # `?jour=N` sert au préchargement : le client range les séances des
+        # jours suivants pendant que l'utilisateur joue celle du jour, pour
+        # qu'une soirée sans réseau ne l'arrête pas. Le contrôle de droit
+        # s'applique de la même façon — précharger n'ouvre rien.
+        demande = request.query_params.get("jour")
+        jour = int(demande) if demande and demande.isdigit() else max(1, profil.current_day or 1)
+        if not 1 <= jour <= 30:
+            return Response(
+                {"error": {"code": "jour_hors_parcours",
+                           "message": "Le parcours compte trente jours."}},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
         lecon = get_object_or_404(Lesson, course_id="course.1", day_number=jour, is_live=True)
         if not peut_acceder(request.user, lecon):
             return Response({"error": motif_refus(lecon)}, status=status.HTTP_403_FORBIDDEN)

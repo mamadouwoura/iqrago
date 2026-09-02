@@ -64,7 +64,13 @@ class Api {
     return 'Identifiant ou mot de passe incorrect.';
   }
 
-  Future<Response<dynamic>> seanceDuJour() => _dio.get('/session/today');
+  /// `jour` sert au préchargement : ranger les séances suivantes pendant que
+  /// l'utilisateur joue celle du jour. Sans lui, la première soirée sans
+  /// réseau arrête tout.
+  Future<Response<dynamic>> seanceDuJour({int? jour}) => _dio.get(
+        '/session/today',
+        queryParameters: jour == null ? null : {'jour': jour},
+      );
 
   Future<Response<dynamic>> synchroniser(Map<String, dynamic> lot) =>
       _dio.post('/session/sync', data: lot);

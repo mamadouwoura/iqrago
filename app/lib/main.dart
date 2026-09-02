@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'core/api.dart';
+import 'core/depot.dart';
+import 'core/stockage.dart';
 import 'features/auth/ecran_connexion.dart';
 import 'features/session/ecran_seance.dart';
 
@@ -15,6 +17,7 @@ class IqraGo extends StatefulWidget {
 
 class _IqraGoState extends State<IqraGo> {
   final _api = Api();
+  late final _depot = Depot(_api, Stockage());
   bool? _connecte;
 
   @override
@@ -42,6 +45,7 @@ class _IqraGoState extends State<IqraGo> {
           ),
         true => EcranSeance(
             api: _api,
+            depot: _depot,
             onDeconnexion: () => setState(() => _connecte = false),
           ),
       },
